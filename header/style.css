@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  background-color: #ffff;
+  max-width: 1534px;
+  max-height: 2416px;
+  font-family: Montserrat-Regular;
+  margin-left: 140px;
+  margin-right: 140px;
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("fonts/Montserrat-Regular.eot");
+  src: local("☺"), url("fonts/Montserrat-Regular.woff") format("woff"),
+    url("fonts/Montserrat-Regular.ttf") format("truetype"),
+    url("fonts/Montserrat-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+header {
+  margin: 0px;
+  padding: auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas:
+    "logo navigation-list"
+    "logo navigation-list";
+}
+main {
+  display: grid;
+}
+.account {
+  margin: 18px 0 18px 0;
+  font-size: 12px;
+}
+.arrow {
+  width: 24px;
+  height: 21px;
+  align-self: center;
+  margin-right: 20px;
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  grid-area: navigation-list;
+  font-size: 14px;
+}
+
+.logo {
+  margin: auto 0;
+}
+.main {
+  grid-area: main;
+}
+.more {
+  column-gap: 0;
+}
+
+.nav-menu {
+  display: block;
+  margin: 26px 0 26px 0;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.nav-menu:nth-child(2) {
+  margin-right: 0;
+}
+.nav-menu:nth-child(6) {
+  margin-right: 0;
+}
+.search {
+  width: 320px;
+  height: 304px;
+  padding: 40px 30px 30px;
+  background-color: rgb(0, 255, 51);
+}
+
+h2 {
+  text-align: left;
+  margin: 0;
+}
+
+.enter {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 8px 21.85px;
+  color: #bc9cff;
+  background: #ffff;
+  border-radius: 22px;
+  margin-right: 20px;
+}
+.enter::after {
+  content: " ";
+  display: block;
+  background-image: linear-gradient(#bc9cff, #8ba4f9);
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: -1;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border-radius: 22px;
+}
+.registration {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 8px 23.219px;
+  color: #ffff;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+  border-radius: 22px;
+}
+.registration::after {
+  content: " ";
+  display: block;
+  background-image: linear-gradient(#bc9cff, #8ba4f9);
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: -1;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border-radius: 22px;
+}
