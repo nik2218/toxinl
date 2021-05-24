@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background-color: #ffff;
-  max-width: 1534px;
+  max-width: 1440px;
   max-height: 2416px;
   font-family: Montserrat-Regular;
   margin-left: 140px;
@@ -25,9 +25,7 @@ header {
     "logo navigation-list"
     "logo navigation-list";
 }
-main {
-  display: grid;
-}
+
 .account {
   margin: 18px 0 18px 0;
   font-size: 12px;
@@ -38,7 +36,20 @@ main {
   align-self: center;
   margin-right: 20px;
 }
-
+.arrival{
+  grid-area: arrival;  
+  width: 150px;
+  height: 65px;
+}
+.departure{
+  grid-area: departure;
+}
+.find{
+  grid-area: find;
+}
+.guests{
+  grid-area: guests;
+}
 .navigation-list {
   display: flex;
   justify-content: flex-end;
@@ -46,7 +57,12 @@ main {
   grid-area: navigation-list;
   font-size: 14px;
 }
-
+input[type=date]{
+  width: 150px;
+  height: 44px;
+  border-radius: 4px;
+  border: 1px;
+}
 .logo {
   margin: auto 0;
 }
@@ -69,18 +85,38 @@ main {
 .nav-menu:nth-child(6) {
   margin-right: 0;
 }
+.pArrival{
+  margin: 0 0 5px 0;
+}
+.pDeparture{
+  margin: 0 0 5px 0;
+}
 .search {
+  display: grid;
   width: 320px;
   height: 304px;
   padding: 40px 30px 30px;
   background-color: rgb(0, 255, 51);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "hSearch hSearch hSearch hSearch"
+    "arrival arrival departure departure"
+    "guests guests guests guests"
+    "find find find find";
+    grid-template-rows: 80px 85px 85px 65px;
 }
 
 h2 {
   text-align: left;
   margin: 0;
+  
 }
-
+.hSearch{
+  grid-area: hSearch;
+  height: 59px;
+  margin: 0;
+  padding: 0;
+}
 .enter {
   position: relative;
   display: inline-block;
