@@ -3,22 +3,11 @@ body {
   background-color: #ffff;
   max-width: 1440px;
   max-height: 2416px;
-  font-family: Montserrat-Regular;
-  margin-left: 140px;
-  margin-right: 140px;
+  font-family: "Montserrat", sans-serif;
 }
-@font-face {
-  font-family: "Montserrat-Regular";
-  src: url("fonts/Montserrat-Regular.eot");
-  src: local("☺"), url("fonts/Montserrat-Regular.woff") format("woff"),
-    url("fonts/Montserrat-Regular.ttf") format("truetype"),
-    url("fonts/Montserrat-Regular.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
+
 header {
-  margin: 0px;
-  padding: auto;
+  margin: 0 140px 67px;
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-areas:
@@ -31,23 +20,23 @@ header {
   font-size: 12px;
 }
 .arrow {
-  width: 24px;
-  height: 21px;
+  width: 14px;
+  height: 20px;
   align-self: center;
   margin-right: 20px;
 }
-.arrival{
-  grid-area: arrival;  
+.arrival {
+  grid-area: arrival;
   width: 150px;
   height: 65px;
 }
-.departure{
+.departure {
   grid-area: departure;
 }
-.find{
+.find {
   grid-area: find;
 }
-.guests{
+.guests {
   grid-area: guests;
 }
 .navigation-list {
@@ -57,11 +46,22 @@ header {
   grid-area: navigation-list;
   font-size: 14px;
 }
-input[type=date]{
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  background: url(img/arrow.svg) no-repeat 0% 50%;
+  background-size: initial;
+  width: 14px;
+  height: 20px;
+}
+input[type="date"] {
   width: 150px;
   height: 44px;
   border-radius: 4px;
-  border: 1px;
+  border-width: 1px;
+  border-color: #bbbcc6;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 .logo {
   margin: auto 0;
@@ -85,33 +85,38 @@ input[type=date]{
 .nav-menu:nth-child(6) {
   margin-right: 0;
 }
-.pArrival{
-  margin: 0 0 5px 0;
+.pArrival {
+  margin: 0 0 5.44px 0;
+  color: #1f2041;
+  font-weight: bold;
 }
-.pDeparture{
-  margin: 0 0 5px 0;
+.pDeparture {
+  margin: 0 0 5.44px 0;
+  font-weight: bold;
 }
 .search {
   display: grid;
+  margin-left: 140px;
   width: 320px;
   height: 304px;
   padding: 40px 30px 30px;
-  background-color: rgb(0, 255, 51);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #e8e8ec;
+  box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 25%), 0px 0px 0px rgb(0 0 0 / 25%);
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "hSearch hSearch hSearch hSearch"
     "arrival arrival departure departure"
     "guests guests guests guests"
     "find find find find";
-    grid-template-rows: 80px 85px 85px 65px;
+  grid-template-rows: 80px 85px 85px 65px;
 }
 
 h2 {
   text-align: left;
   margin: 0;
-  
 }
-.hSearch{
+.hSearch {
   grid-area: hSearch;
   height: 59px;
   margin: 0;
