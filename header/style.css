@@ -2,19 +2,17 @@ body {
   margin: 0;
   background-color: #ffff;
   max-width: 1440px;
-  max-height: 2416px;
+  max-height: 900px;
   font-family: "Montserrat", sans-serif;
 }
-
 header {
-  margin: 0 140px 67px;
+  margin: 0 140px 0px;
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-areas:
     "logo navigation-list"
     "logo navigation-list";
 }
-
 .account {
   margin: 18px 0 18px 0;
   font-size: 12px;
@@ -35,6 +33,31 @@ header {
 }
 .find {
   grid-area: find;
+  width: 320px;
+  height: 44px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 8px 23.219px;
+  color: #ffff;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+  border-radius: 22px;
+  font-weight: bold;
+  border: none
+}
+svg{
+  display: inline-block;
+  vertical-align: middle;
+  fill: #fff;
+  width: 22px;
+  height: 28px;
+  margin: 0;
+  transform: translate(-80%, -95%);
+  position: absolute; 
+  top: 80%; 
+  left: 95%
 }
 .guests {
   grid-area: guests;
@@ -60,19 +83,25 @@ input[type="date"] {
   border-width: 1px;
   border-color: #bbbcc6;
   font-size: 14px;
+  color: #4b4c66;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
 .logo {
   margin: auto 0;
 }
-.main {
+main {
   grid-area: main;
+  background-image: url(/main/img/image\ 3.png);
+  height: 830px;
+ background-size:100%;
+ background-repeat: no-repeat;
+ background-position: top;
+ padding-top: 67px;
 }
 .more {
   column-gap: 0;
 }
-
 .nav-menu {
   display: block;
   margin: 26px 0 26px 0;
@@ -92,14 +121,22 @@ input[type="date"] {
 }
 .pDeparture {
   margin: 0 0 5.44px 0;
+  color: #1f2041;
   font-weight: bold;
+}
+.pGuests {
+  margin: 0 0 5px 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: top;
+  
 }
 .search {
   display: grid;
-  margin-left: 140px;
+  margin-left: 140px;  
   width: 320px;
   height: 304px;
-  padding: 40px 30px 30px;
+  padding: 39px 29px 29px;
   background-color: rgb(255, 255, 255);
   border: 1px solid #e8e8ec;
   box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 25%), 0px 0px 0px rgb(0 0 0 / 25%);
@@ -109,9 +146,19 @@ input[type="date"] {
     "arrival arrival departure departure"
     "guests guests guests guests"
     "find find find find";
-  grid-template-rows: 80px 85px 85px 65px;
+    grid-template-rows: 80px 85px 85px 56px;
 }
-
+select{
+  color: -internal-light-dark(#bbbcc6, white);
+}
+.guests select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 4px;
+  width: 320px;
+  height: 44px;
+}
 h2 {
   text-align: left;
   margin: 0;
