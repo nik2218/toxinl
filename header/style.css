@@ -22,6 +22,8 @@ header {
   height: 20px;
   align-self: center;
   margin-right: 20px;
+  margin-left: 8px;
+  opacity: 0.5;
 }
 .arrival {
   grid-area: arrival;
@@ -46,6 +48,39 @@ header {
   border-radius: 22px;
   font-weight: bold;
   border: none
+}
+.footNav{
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr 260px;
+  grid-template-areas: "description fNavigation fAboutUs fSupport fSubscription"
+  "description fNavigation fAboutUs fSupport fSubscription"
+  "description fNavigation fAboutUs fSupport fSubscription"
+  "description fNavigation fAboutUs fSupport fSubscription"
+  "description fNavigation fAboutUs fSupport fSubscription";
+  margin: 100px 140px;
+  height: 172px;
+}
+.fText{
+  line-height: 24pt;
+  font-size: 14px;
+  margin: 0;
+  color: #4b4c66;
+}
+.fNav{
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.fNav li{
+  line-height: 26.6pt;
+  margin: 0;
+  font-size: 14px;
+  text-decoration: none;
+}
+.fNav li a{
+  text-decoration: none;
+  color: #78798d;
+
 }
 svg{
   display: inline-block;
@@ -83,7 +118,8 @@ input[type="date"] {
   border-width: 1px;
   border-color: #bbbcc6;
   font-size: 14px;
-  color: #4b4c66;
+  color: #1f2041;
+  opacity: 0.75;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
@@ -93,7 +129,7 @@ input[type="date"] {
 main {
   grid-area: main;
   background-image: url(/main/img/image\ 3.png);
-  height: 830px;
+  height: 763px;
  background-size:100%;
  background-repeat: no-repeat;
  background-position: top;
@@ -107,12 +143,21 @@ main {
   margin: 26px 0 26px 0;
   text-decoration: none;
   margin-right: 20px;
+  color: #1f2041;
+  opacity: 0.5;
 }
 .nav-menu:nth-child(2) {
   margin-right: 0;
 }
 .nav-menu:nth-child(6) {
   margin-right: 0;
+}
+.motto{
+  position: absolute;
+  top: 834px;
+  left: 1009px;
+  right: 140px;
+  bottom: 18px;
 }
 .pArrival {
   margin: 0 0 5.44px 0;
@@ -130,6 +175,14 @@ main {
   font-weight: bold;
   text-align: top;
   
+}
+.pMotto{
+  line-height: 24pt;
+  font-size: 14px;
+  margin: 0;
+  text-align: right;
+  color: #1f2041;
+  opacity: 0.75;
 }
 .search {
   display: grid;
@@ -151,6 +204,11 @@ main {
 select{
   color: -internal-light-dark(#bbbcc6, white);
 }
+.tNav{
+  margin: 0 0 0 40px;
+  font-weight: bold;
+  color:#1F2041;
+}
 .guests select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -159,15 +217,13 @@ select{
   width: 320px;
   height: 44px;
 }
-h2 {
-  text-align: left;
-  margin: 0;
-}
 .hSearch {
   grid-area: hSearch;
   height: 59px;
   margin: 0;
   padding: 0;
+  text-align: left;
+  color: #1f2041;
 }
 .enter {
   position: relative;
