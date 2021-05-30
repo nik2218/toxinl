@@ -1,88 +1,85 @@
 body {
-  margin: 0;
   background-color: #ffff;
-  max-width: 1440px;
-  max-height: 900px;
   font-family: "Montserrat", sans-serif;
+  margin: 0;
+  max-height: 900px;
+  max-width: 1440px;
 }
 header {
-  margin: 0 140px 0px;
   display: grid;
-  grid-template-columns: 300px 1fr;
   grid-template-areas:
-    "logo navigation-list"
-    "logo navigation-list";
+    "logo navigation account"
+    "logo navigation account"
+    "logo navigation account";
+  grid-template-columns: 250px 607px 303px;
+  margin: 0 140px 0px;
 }
 .account {
-  margin: 18px 0 18px 0;
+  grid-area: account;
   font-size: 12px;
+  align-self: center;
 }
 .arrow {
-  width: 14px;
-  height: 20px;
-  align-self: center;
-  margin-right: 20px;
-  margin-left: 8px;
-  opacity: 0.5;
+  margin-left: 2px;
 }
 .arrival {
   grid-area: arrival;
-  width: 150px;
   height: 65px;
+  width: 150px;
 }
 .departure {
   grid-area: departure;
 }
 .find {
   grid-area: find;
-  width: 320px;
   height: 44px;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  font-size: 12px;
-  text-decoration: none;
   padding: 8px 23.219px;
-  color: #ffff;
-  background: linear-gradient(#bc9cff, #8ba4f9);
-  border-radius: 22px;
+  position: relative;
+  text-decoration: none;
+  width: 320px;
   font-weight: bold;
-  border: none
+  border-radius: 22px;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+  border: none;
+  color: #fff;
+  align-self: end;
 }
-.footNav{
+.footNav {
   display: grid;
+  grid-template-areas:
+    "description fNavigation fAboutUs fSupport fSubscription"
+    "description fNavigation fAboutUs fSupport fSubscription"
+    "description fNavigation fAboutUs fSupport fSubscription"
+    "description fNavigation fAboutUs fSupport fSubscription"
+    "description fNavigation fAboutUs fSupport fSubscription";
   grid-template-columns: 260px 1fr 1fr 1fr 260px;
-  grid-template-areas: "description fNavigation fAboutUs fSupport fSubscription"
-  "description fNavigation fAboutUs fSupport fSubscription"
-  "description fNavigation fAboutUs fSupport fSubscription"
-  "description fNavigation fAboutUs fSupport fSubscription"
-  "description fNavigation fAboutUs fSupport fSubscription";
   margin: 100px 140px;
   height: 172px;
 }
-.fText{
+.fText {
   line-height: 24pt;
   font-size: 14px;
   margin: 0;
-  color: #4b4c66;
+  color: #1f2041;
+  opacity: 0.75;
 }
-.fNav{
+.fNav {
   list-style-type: none;
   margin-block-start: 0;
   margin-block-end: 0;
 }
-.fNav li{
+.fNav li {
   line-height: 26.6pt;
   margin: 0;
   font-size: 14px;
   text-decoration: none;
 }
-.fNav li a{
+.fNav li a {
   text-decoration: none;
-  color: #78798d;
-
+  color: #1f2041;
+  opacity: 0.5;
 }
-svg{
+svg {
   display: inline-block;
   vertical-align: middle;
   fill: #fff;
@@ -90,12 +87,16 @@ svg{
   height: 28px;
   margin: 0;
   transform: translate(-80%, -95%);
-  position: absolute; 
-  top: 80%; 
-  left: 95%
+  position: absolute;
+  top: 80%;
+  left: 95%;
 }
 .guests {
   grid-area: guests;
+  border-color: #1f2041;
+}
+.navigation {
+  grid-area: navigation;
 }
 .navigation-list {
   display: flex;
@@ -103,11 +104,21 @@ svg{
   flex-wrap: wrap;
   grid-area: navigation-list;
   font-size: 14px;
+  padding-inline-start: 0;
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.navigation-list a:nth-child(2) {
+  margin-right: 20px;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 1;
-  background: url(img/arrow.svg) no-repeat 0% 50%;
+  background: url(img/arrow.svg) no-repeat;
   background-size: initial;
+  transform: translate(-45%, 41%);
+  top: 45%;
+  left: 41%;
   width: 14px;
   height: 20px;
 }
@@ -116,24 +127,28 @@ input[type="date"] {
   height: 44px;
   border-radius: 4px;
   border-width: 1px;
-  border-color: #bbbcc6;
+  border-color: #1f2041;
   font-size: 14px;
   color: #1f2041;
-  opacity: 0.75;
+  font-family: inherit;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  line-height: 18pt;
+  margin: 0;
+  padding: 0;
 }
 .logo {
-  margin: auto 0;
+  grid-area: logo;
+  padding-top: 3px;
+  align-self: center;
 }
 main {
   grid-area: main;
   background-image: url(/main/img/image\ 3.png);
   height: 763px;
- background-size:100%;
- background-repeat: no-repeat;
- background-position: top;
- padding-top: 67px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 67px;
 }
 .more {
   column-gap: 0;
@@ -142,41 +157,33 @@ main {
   display: block;
   margin: 26px 0 26px 0;
   text-decoration: none;
-  margin-right: 20px;
+  margin-right: 23px;
   color: #1f2041;
   opacity: 0.5;
+  font-size: 14px;
 }
-.nav-menu:nth-child(2) {
-  margin-right: 0;
-}
-.nav-menu:nth-child(6) {
-  margin-right: 0;
-}
-.motto{
+.motto {
   position: absolute;
   top: 834px;
   left: 1009px;
   right: 140px;
   bottom: 18px;
 }
-.pArrival {
-  margin: 0 0 5.44px 0;
-  color: #1f2041;
-  font-weight: bold;
-}
+.pArrival,
 .pDeparture {
   margin: 0 0 5.44px 0;
   color: #1f2041;
   font-weight: bold;
+  font-size: 12px;
 }
+
 .pGuests {
   margin: 0 0 5px 0;
   font-size: 12px;
   font-weight: bold;
   text-align: top;
-  
 }
-.pMotto{
+.pMotto {
   line-height: 24pt;
   font-size: 14px;
   margin: 0;
@@ -185,29 +192,31 @@ main {
   opacity: 0.75;
 }
 .search {
+  border-radius: 4px;
   display: grid;
-  margin-left: 140px;  
+  margin-left: 140px;
   width: 320px;
   height: 304px;
   padding: 39px 29px 29px;
   background-color: rgb(255, 255, 255);
   border: 1px solid #e8e8ec;
-  box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 25%), 0px 0px 0px rgb(0 0 0 / 25%);
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 25%), 0px 0px 0px rgb(0 0 0 / 25%);
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "hSearch hSearch hSearch hSearch"
     "arrival arrival departure departure"
     "guests guests guests guests"
     "find find find find";
-    grid-template-rows: 80px 85px 85px 56px;
+  grid-template-rows: 80px 85px 85px 56px;
+  column-gap: 20px;
 }
-select{
-  color: -internal-light-dark(#bbbcc6, white);
-}
-.tNav{
+.tCaption {
   margin: 0 0 0 40px;
   font-weight: bold;
-  color:#1F2041;
+  color: #1f2041;
+}
+.fSubscription p {
+  margin: 0;
 }
 .guests select {
   -moz-appearance: none;
@@ -216,26 +225,34 @@ select{
   border-radius: 4px;
   width: 320px;
   height: 44px;
+  background: url(/main/img/arrow.svg) no-repeat 95% 50%;
+  border-color:#1F2041;
+  opacity: 0.25;
+}
+select{
+text-indent: 15px;
 }
 .hSearch {
   grid-area: hSearch;
-  height: 59px;
   margin: 0;
   padding: 0;
   text-align: left;
   color: #1f2041;
+  font-size: 1.5em;
+  font-weight: 900;
 }
 .enter {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   text-decoration: none;
-  padding: 8px 21.85px;
+  padding: 8px 20px;
   color: #bc9cff;
   background: #ffff;
   border-radius: 22px;
-  margin-right: 20px;
+  margin-right: 19px;
+  font-weight: bold;
 }
 .enter::after {
   content: " ";
@@ -253,12 +270,13 @@ select{
   position: relative;
   display: inline-block;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   text-decoration: none;
-  padding: 8px 23.219px;
+  padding: 8px 19px;
   color: #ffff;
   background: linear-gradient(#bc9cff, #8ba4f9);
   border-radius: 22px;
+  font-weight: bold;
 }
 .registration::after {
   content: " ";
