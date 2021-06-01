@@ -27,30 +27,30 @@ header {
   height: 65px;
   width: 150px;
 }
-.btnMail{
-padding: 0;
-width: 44px;
-height: 44px;
-border: 1px solid rgba(31,32,65, 0.25);
-/* opacity: 0.25; */
-border-left: 0;
-border-top-right-radius: 4px;
-border-bottom-right-radius: 4px;
-background-color: #fff;
-cursor: pointer;
-vertical-align: top;
-align-items: flex-start;
-position: relative;
+.btnMail {
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  /* opacity: 0.25; */
+  border-left: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  vertical-align: top;
+  align-items: flex-start;
+  position: relative;
 }
 .departure {
   grid-area: departure;
 }
-.mail_text{
+.mail_text {
   width: calc(100% - 54px);
   height: 42px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-  border: 1px solid #1F2041;
+  border: 1px solid #1f2041;
   border-right: 0;
   padding: 0;
   opacity: 0.25;
@@ -58,9 +58,9 @@ position: relative;
   font-size: 14px;
   font-family: inherit;
 }
-.Mail{
+.Mail {
   display: flex;
-  margin-top: 20px;
+  margin-top: 21px;
 }
 .find {
   grid-area: find;
@@ -90,31 +90,49 @@ position: relative;
   margin: 100px 140px;
   height: 172px;
 }
-.flogo{
+.flogo {
   margin-bottom: 12px;
 }
 .fText {
-  line-height: 19pt;
+  line-height: 18pt;
   font-size: 14px;
   margin: 0;
   color: #1f2041;
   opacity: 0.75;
 }
-.fNav {
+.fNav,
+.fAbUs,
+.fSup {
   list-style-type: none;
   margin-block-start: 0;
   margin-block-end: 0;
-  padding: 0;
 }
-.fNav li {
+.fNav li,
+.fAbUs li,
+.fSup li
+{
   margin-top: 21px;
   font-size: 14px;
   text-decoration: none;
- }
-.fNav li a {
+}
+.fNav li a,
+.fAbUs li a,
+.fSup li a
+{
   text-decoration: none;
   color: #1f2041;
   opacity: 0.5;
+}
+.fAbUs{
+  padding-left: 28px;
+}
+.fSup{
+  padding-left: 13px;
+}
+.fSub{
+  line-height: 24px;
+  margin: 19px 0 0 0;
+  font-size: 14px;
 }
 svg {
   display: inline-block;
@@ -173,7 +191,7 @@ input[type="date"] {
   margin: 0;
   padding: 0;
 }
-input[type='text']{
+input[type="text"] {
   margin: 0;
 }
 .logo {
@@ -204,10 +222,11 @@ main {
 }
 .motto {
   position: absolute;
-  top: 834px;
+  top: 836px;
   left: 1009px;
   right: 140px;
   bottom: 18px;
+ 
 }
 .pArrival,
 .pDeparture {
@@ -224,14 +243,13 @@ main {
   text-align: top;
 }
 .pMotto {
-  line-height: 24pt;
   font-size: 14px;
   margin: 0;
   text-align: right;
   color: #1f2041;
   opacity: 0.75;
   width: 297px;
-  height: 47px;
+
 }
 .search {
   border-radius: 4px;
@@ -252,15 +270,28 @@ main {
   grid-template-rows: 80px 85px 85px 56px;
   column-gap: 20px;
 }
-.tCaption {
-  margin: 3px 0 15px 40px;
+.tCaption,
+.tSub,
+.tSup,
+.tAbUs {
   font-weight: bold;
   color: #1f2041;
   font-size: 12px;
 }
-.fSubscription p {
-  margin: 3px 0 0 0;
+
+.tCaption {
+  margin: 3px 0 15px 40px;
 }
+.tAbUs {
+  margin: 3px 0 15px 27px;
+}
+.tSup {
+  margin: 3px 0 15px 14px;
+}
+.tSub {
+  margin: 3px 0 15px 0px;
+}
+
 .guests select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -269,11 +300,11 @@ main {
   width: 320px;
   height: 44px;
   background: url(/main/img/arrow.svg) no-repeat 95% 50%;
-  border-color:#1F2041;
+  border-color: #1f2041;
   opacity: 0.25;
 }
-select{
-text-indent: 15px;
+select {
+  text-indent: 15px;
 }
 .hSearch {
   grid-area: hSearch;
