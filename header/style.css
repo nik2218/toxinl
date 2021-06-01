@@ -42,6 +42,37 @@ header {
   align-items: flex-start;
   position: relative;
 }
+.copBar{
+  display: grid;
+  grid-template-areas: "copyright btns";
+  grid-template-columns: 1fr 1fr;
+  
+}
+
+.copyright{
+  grid-area: copyright;
+}
+.networks{
+  grid-area: networks;
+  margin: 0;
+  width: 720px;
+}
+.twitter, .facebook, .instagram{
+  width: 26px;
+  height: 26px; 
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.twitter{
+  background: url(/footer/img/twitter.png) no-repeat 50% 50%;
+}
+.facebook{
+  background: url(/footer/img/facebook.png) no-repeat 50% 50%;
+}
+.instagram{
+  background: url(/footer/img/instagram.png) no-repeat 50% 50%;
+}
 .departure {
   grid-area: departure;
 }
@@ -325,7 +356,7 @@ select {
   color: #bc9cff;
   background: #ffff;
   border-radius: 22px;
-  margin-right: 19px;
+  margin-right: 17px;
   font-weight: bold;
 }
 .enter::after {
