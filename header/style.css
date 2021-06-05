@@ -2,6 +2,7 @@ body {
   background-color: #ffff;
   font-family: "Montserrat", sans-serif;
   margin: 0;
+  max-width: 1440px;
 }
 header {
   display: grid;
@@ -9,26 +10,27 @@ header {
     "logo navigation account"
     "logo navigation account"
     "logo navigation account";
-  grid-template-columns: 250px 607px 303px;
+  /* grid-template-columns: 250px 607px 303px; */
   margin: 0 140px 0px;
 }
 .account {
   grid-area: account;
   font-size: 12px;
   align-self: center;
+  justify-self: end;
 }
 .arrow {
   margin-left: 2px;
 }
 .arrival {
   grid-area: arrival;
-  height: 65px;
-  width: 150px;
+  /* height: 65px;
+  width: 150px; */
 }
 .btnMail {
   padding: 0;
-  width: 44px;
-  height: 44px;
+  /* width: 44px;
+  height: 44px; */
   border: 1px solid rgba(31, 32, 65, 0.25);
   /* opacity: 0.25; */
   border-left: 0;
@@ -44,7 +46,7 @@ header {
   display: grid;
   grid-template-areas: "copyright networks";
   grid-template-columns: 1fr 1fr;
-  height: 70px;
+  /* height: 70px; */
 }
 
 .copyright{
@@ -64,8 +66,8 @@ header {
   align-self: center;
 }
 .twitter, .facebook, .instagram{
-  width: 26px;
-  height: 26px; 
+  /* width: 26px;
+  height: 26px;  */
   border: none;
   cursor: pointer;
   padding: 0;
@@ -84,8 +86,8 @@ header {
   grid-area: departure;
 }
 .mail_text {
-  width: calc(100% - 54px);
-  height: 42px;
+  /* width: calc(100% - 54px);
+  height: 42px; */
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   border: 1px solid #1f2041;
@@ -102,11 +104,11 @@ header {
 }
 .find {
   grid-area: find;
-  height: 44px;
+  /* height: 44px; */
   padding: 8px 23.219px;
   position: relative;
   text-decoration: none;
-  width: 320px;
+  /* width: 320px; */
   font-weight: bold;
   border-radius: 22px;
   background: linear-gradient(#bc9cff, #8ba4f9);
@@ -119,17 +121,13 @@ header {
 .footNav {
   display: grid;
   grid-template-areas:
-    "description fNavigation fAboutUs fSupport fSubscription"
-    "description fNavigation fAboutUs fSupport fSubscription"
-    "description fNavigation fAboutUs fSupport fSubscription"
-    "description fNavigation fAboutUs fSupport fSubscription"
     "description fNavigation fAboutUs fSupport fSubscription";
-  grid-template-columns: 260px 1fr 1fr 1fr 260px;
+  /* grid-template-columns: 260px 1fr 1fr 1fr 260px; */
   margin-bottom: 100px;
 }
 .footer{
   margin: 100px 140px 0 140px;
-  height: 172px;
+  /* height: 172px; */
 }
 .flogo {
   margin-bottom: 12px;
@@ -179,8 +177,8 @@ svg {
   display: inline-block;
   vertical-align: middle;
   fill: #fff;
-  width: 20px;
-  height: 26px;
+  /* width: 20px; */
+  /* height: 26px; */
   margin: 0;
   transform: translate(-80%, -95%);
   position: absolute;
@@ -215,12 +213,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   transform: translate(-45%, 41%);
   top: 45%;
   left: 41%;
-  width: 14px;
-  height: 20px;
+  /* width: 14px; */
+  /* height: 20px; */
 }
 input[type="date"] {
-  width: 150px;
-  height: 44px;
+  /* width: 150px; */
+  /* height: 44px; */
   border-radius: 4px;
   border-width: 1px;
   border-color: #1f2041;
@@ -243,7 +241,7 @@ input[type="text"] {
 main {
   grid-area: main;
   background-image: url(/main/img/image\ 3.png);
-  height: 763px;
+  /* height: 763px; */
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;
@@ -289,15 +287,15 @@ main {
   text-align: right;
   color: #1f2041;
   opacity: 0.75;
-  width: 297px;
+  /* width: 297px; */
 
 }
 .search {
   border-radius: 4px;
   display: grid;
   margin-left: 140px;
-  width: 320px;
-  height: 304px;
+  max-width: 320px;
+  max-height: 304px;
   padding: 39px 29px 29px;
   background-color: rgb(255, 255, 255);
   border: 1px solid #e8e8ec;
