@@ -2,8 +2,6 @@ body {
   background-color: #ffff;
   font-family: "Montserrat", sans-serif;
   margin: 0;
-  max-height: 900px;
-  max-width: 1440px;
 }
 header {
   display: grid;
@@ -44,18 +42,26 @@ header {
 }
 .copBar{
   display: grid;
-  grid-template-areas: "copyright btns";
+  grid-template-areas: "copyright networks";
   grid-template-columns: 1fr 1fr;
-  
+  height: 70px;
 }
 
 .copyright{
   grid-area: copyright;
+  align-self: center;
+}
+.copyright p{
+  margin: 0;
+  font-size: 14px;
+  color: #1f2041;
+  opacity: 0.75;
 }
 .networks{
   grid-area: networks;
   margin: 0;
-  width: 720px;
+  justify-self: end;
+  align-self: center;
 }
 .twitter, .facebook, .instagram{
   width: 26px;
@@ -67,6 +73,7 @@ header {
 .twitter{
   background: url(/footer/img/twitter.png) no-repeat 50% 50%;
 }
+
 .facebook{
   background: url(/footer/img/facebook.png) no-repeat 50% 50%;
 }
@@ -118,7 +125,10 @@ header {
     "description fNavigation fAboutUs fSupport fSubscription"
     "description fNavigation fAboutUs fSupport fSubscription";
   grid-template-columns: 260px 1fr 1fr 1fr 260px;
-  margin: 100px 140px;
+  margin-bottom: 100px;
+}
+.footer{
+  margin: 100px 140px 0 140px;
   height: 172px;
 }
 .flogo {
