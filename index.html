@@ -13,53 +13,65 @@
     />
   </head>
   <body>
+
+
+
+
+
     <header class="header">
-      <div class="logo">
+      <div class="header__logo">
         <img src="/header/img/logo.svg" alt="logo" />
       </div>
-      <nav class="navigation">
-        <ul class="navigation-list">
+      <nav class="header__navigation">
+        <ul class="header__list">
           <li>
-            <a class="about-us nav-menu" href="#">О нас</a>
+            <a class="header__link" href="#">О нас</a>
           </li>
           <li>
-            <a class="servises nav-menu" id="more" href="#"
+            <a class="header__link header__link__more" href="#"
               >Услуги <img class="arrow" src="/header/img/arrow.svg"
             /></a>
           </li>
           <li>
-            <a class="vacancies nav-menu" href="#"> Вакансии</a>
+            <a class="header__link" href="#"> Вакансии</a>
           </li>
-          <li><a class="news nav-menu" href="#">Новости</a></li>
+          <li><a class="header__link" href="#">Новости</a></li>
           <li>
-            <a class="agreements nav-menu" href="#">
+            <a class="header__link" href="#">
               Соглашения <img class="arrow" src="/header/img/arrow.svg"
             /></a>
           </li>
         </ul>
       </nav>
-      <div class="account">
-        <a class="enter" href="#" title="Войти">ВОЙТИ</a>
-        <a class="registration" href="#" title="зарегистрироваться"
+      <div class="header__account">
+        <a class="header__enter" href="#" title="Войти">ВОЙТИ</a>
+        <a class="header__registration" href="#" title="зарегистрироваться"
           >ЗАРЕГИСТРИРОВАТЬСЯ</a
         >
       </div>
     </header>
+
+
+
+
+
+
+
     <main class="main">
-      <div class="search">
-        <p class="hSearch">Найдём номера под ваши пожелания</p>
-        <div class="arrival">
-          <p class="pArrival">ПРИБЫТИЕ</p>
+      <div class="main__search">
+        <p class="main__title">Найдём номера под ваши пожелания</p>
+        <div class="main__arrival">
+          <p class="main__textArrival">ПРИБЫТИЕ</p>
           <input type="date" />
         </div>
-        <div class="departure">
-          <p class="pDeparture">ВЫЕЗД</p>
+        <div class="main__departure">
+          <p class="main__textDeparture">ВЫЕЗД</p>
           <input type="date" />
         </div>
-        <div class="guests">
+        <div class="main__guests">
           <form>
-            <p class="pGuests">ГОСТИ</p>
-            <select name="guests">
+            <p class="main__textGuests">ГОСТИ</p>
+            <select name="main__selectGuests">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -67,7 +79,7 @@
             </select>
           </form>
         </div>
-        <button class="find" id="bF" type="submit" title="Найти">
+        <button class="main_find" id="bF" type="submit" title="Найти">
           <svg
             width="20"
             height="20"
@@ -83,12 +95,16 @@
           ПОДОБРАТЬ НОМЕР
         </button>
       </div>
-      <div class="motto">
+      <div class="main__motto">
         <p class="pMotto">
           Лучшие номера для вашей работы, отдых и просто вдохновения
         </p>
       </div>
     </main>
+
+
+
+
     <footer class="footer">
       <div class="footNav">
         <div class="description">
