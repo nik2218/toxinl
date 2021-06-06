@@ -2,31 +2,32 @@ body {
   background-color: #ffff;
   font-family: "Montserrat", sans-serif;
   margin: 0;
-  max-width: 1440px;
+  padding: 0;
+  max-width: 1900px;
 }
 
-
-
-
+/* шапка */
 header {
   display: grid;
   grid-template-areas:
-    "header__logo header__navigation header__account"
-    "header__logo header__navigation header__account"
-    "header__logo header__navigation header__account";
-  grid-template-columns: 250px 607px 303px;
+    "logo navigation account"
+    "logo navigation account"
+    "logo navigation account";
+  grid-template-columns: 250px 1fr 303px;
   margin: 0 140px 0px;
 }
-.header__logo {
-  grid-area: header__logo;
+
+.logo {
+  grid-area: logo;
   padding-top: 3px;
   align-self: center;
+}
 
+.navigation {
+  grid-area: navigation;
 }
-.header__navigation {
-  grid-area: header__navigation;
-}
-.header__list {
+
+.navigation__list {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
@@ -37,19 +38,23 @@ header {
   margin-block-start: 0;
   margin-block-end: 0;
 }
-.header__list a:nth-child(2) {
+
+.navigation__list a:nth-child(2) {
   margin-right: 20px;
 }
-.header__account {
-  grid-area: header__account;
+
+.account {
+  grid-area: account;
   font-size: 12px;
   align-self: center;
   justify-self: end;
 }
-.header__link__more {
+
+.navigation__link__more {
   column-gap: 0;
 }
-.header__link {
+
+.navigation__link {
   display: block;
   margin: 26px 0 26px 0;
   text-decoration: none;
@@ -58,10 +63,12 @@ header {
   opacity: 0.5;
   font-size: 14px;
 }
-.arrow {
+
+.navigation__arrow {
   margin-left: 2px;
 }
-.header__enter {
+
+.account__enter {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -74,7 +81,8 @@ header {
   margin-right: 17px;
   font-weight: bold;
 }
-.header__enter::after {
+
+.account__enter::after {
   content: " ";
   display: block;
   background-image: linear-gradient(#bc9cff, #8ba4f9);
@@ -86,7 +94,8 @@ header {
   height: calc(100% + 2px);
   border-radius: 22px;
 }
-.header__registration {
+
+.account__registration {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -98,7 +107,8 @@ header {
   border-radius: 22px;
   font-weight: bold;
 }
-.header__registration::after {
+
+.account__registration::after {
   content: " ";
   display: block;
   background-image: linear-gradient(#bc9cff, #8ba4f9);
@@ -111,19 +121,18 @@ header {
   border-radius: 22px;
 }
 
-
-
-
+/* основная часть */
 main {
-  grid-area: main;
   background-image: url(/main/img/image\ 3.png);
-  height: 763px;
-  background-size: 100%;
+  min-height: 763px;
+  min-width: none;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  /* background-position: top; */
   padding-top: 67px;
 }
-.main__search {
+
+.search {
   border-radius: 4px;
   display: grid;
   margin-left: 140px;
@@ -135,15 +144,16 @@ main {
   box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 25%), 0px 0px 0px rgb(0 0 0 / 25%);
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    "main__title main__title main__title main__title"
-    "main__arrival main__arrival main__departure main__departure"
-    "main__guests main__guests main__guests main__guests"
-    "find find find find";
+    "search__title search__title search__title search__title"
+    "search__arrival search__arrival search__departure search__departure"
+    "search__guests search__guests search__guests search__guests"
+    "search__find search__find search__find search__find";
   grid-template-rows: 80px 85px 85px 56px;
   column-gap: 20px;
 }
-.main__title {
-  grid-area: main__title;
+
+.search__title {
+  grid-area: search__title;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -151,216 +161,20 @@ main {
   font-size: 1.5em;
   font-weight: 900;
 }
-.main__arrival {
-  grid-area: main__arrival;
+
+.search__arrival {
+  grid-area: search__arrival;
   height: 65px;
   width: 150px;
 }
-.main__textArrival,
-.main__textDeparture {
+
+.search__textArrival,
+.search__textDeparture {
   margin: 0 0 5.44px 0;
   color: #1f2041;
   font-weight: bold;
   font-size: 12px;
 }
-.main__departure {
-  grid-area: main__departure;
-}
-.main__guests {
-  grid-area: main__guests;
-  border-color: #1f2041;
-}
-.main__guests {
-  grid-area: main__guests;
-  border-color: #1f2041;
-}
-.main__textGuests {
-  margin: 0 0 5px 0;
-  font-size: 12px;
-  font-weight: bold;
-  text-align: top;
-}
-.main__selectGuests select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 4px;
-  width: 320px;
-  height: 44px;
-  background: url(/main/img/arrow.svg) no-repeat 95% 50%;
-  border-color: #1f2041;
-  opacity: 0.25;
-}
-select {
-  text-indent: 15px;
-}
-
-
-
-
-
-
-
-
-
-
-.btnMail {
-  padding: 0;
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  /* opacity: 0.25; */
-  border-left: 0;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  background-color: #fff;
-  cursor: pointer;
-  vertical-align: top;
-  align-items: flex-start;
-  position: relative;
-}
-.copBar{
-  display: grid;
-  grid-template-areas: "copyright networks";
-  grid-template-columns: 1fr 1fr;
-  height: 70px;
-}
-
-.copyright{
-  grid-area: copyright;
-  align-self: center;
-}
-.copyright p{
-  margin: 0;
-  font-size: 14px;
-  color: #1f2041;
-  opacity: 0.75;
-}
-.networks{
-  grid-area: networks;
-  margin: 0;
-  justify-self: end;
-  align-self: center;
-}
-.twitter, .facebook, .instagram{
-  width: 26px;
-  height: 26px; 
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-.twitter{
-  background: url(/footer/img/twitter.png) no-repeat 50% 50%;
-}
-
-.facebook{
-  background: url(/footer/img/facebook.png) no-repeat 50% 50%;
-}
-.instagram{
-  background: url(/footer/img/instagram.png) no-repeat 50% 50%;
-}
-
-.mail_text {
-  width: calc(100% - 54px);
-  height: 42px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border: 1px solid #1f2041;
-  border-right: 0;
-  padding: 0;
-  opacity: 0.25;
-  padding-left: 15px;
-  font-size: 14px;
-  font-family: inherit;
-}
-.Mail {
-  display: flex;
-  margin-top: 21px;
-}
-.find {
-  grid-area: find;
-  height: 44px;
-  padding: 8px 23.219px;
-  position: relative;
-  text-decoration: none;
-  width: 320px;
-  font-weight: bold;
-  border-radius: 22px;
-  background: linear-gradient(#bc9cff, #8ba4f9);
-  border: none;
-  color: #fff;
-  align-self: end;
-  font-size: 12px;
-  cursor: pointer;
-}
-.footNav {
-  display: grid;
-  grid-template-areas:
-    "description fNavigation fAboutUs fSupport fSubscription";
-  grid-template-columns: 260px 1fr 1fr 1fr 260px;
-  margin-bottom: 100px;
-}
-.footer{
-  margin: 100px 140px 0 140px;
-  height: 172px;
-}
-.flogo {
-  margin-bottom: 12px;
-}
-.fText {
-  line-height: 18pt;
-  font-size: 14px;
-  margin: 0;
-  color: #1f2041;
-  opacity: 0.75;
-}
-.fNav,
-.fAbUs,
-.fSup {
-  list-style-type: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-.fNav li,
-.fAbUs li,
-.fSup li
-{
-  margin-top: 21px;
-  font-size: 14px;
-  text-decoration: none;
-}
-.fNav li a,
-.fAbUs li a,
-.fSup li a
-{
-  text-decoration: none;
-  color: #1f2041;
-  opacity: 0.5;
-}
-.fAbUs{
-  padding-left: 28px;
-}
-.fSup{
-  padding-left: 13px;
-}
-.fSub{
-  line-height: 24px;
-  margin: 19px 0 0 0;
-  font-size: 14px;
-}
-svg {
-  display: inline-block;
-  vertical-align: middle;
-  fill: #fff;
-  width: 20px;
-  height: 26px;
-  margin: 0;
-  transform: translate(-80%, -95%);
-  position: absolute;
-  top: 80%;
-  left: 95%;
-}
-
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 1;
@@ -372,6 +186,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 14px;
   height: 20px;
 }
+
 input[type="date"] {
   width: 150px;
   height: 44px;
@@ -386,11 +201,67 @@ input[type="date"] {
   margin: 0;
   padding: 0;
 }
+
 input[type="text"] {
   margin: 0;
 }
 
+.search__departure {
+  grid-area: search__departure;
+}
 
+.search__guests {
+  grid-area: search__guests;
+  border-color: #1f2041;
+}
+
+.search__textGuests {
+  margin: 0 0 5px 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: top;
+}
+
+select {
+  text-indent: 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 4px;
+  width: 320px;
+  height: 44px;
+  background: url(/main/img/arrow.svg) no-repeat 95% 50%;
+  border: 1px solid #1f2041;
+  opacity: 0.5;
+}
+
+.search__find {
+  grid-area: search__find;
+  height: 44px;
+  padding: 8px 23.219px;
+  position: relative;
+  text-decoration: none;
+  width: 320px;
+  font-weight: bold;
+  border-radius: 22px;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+  border: none;
+  color: #fff;
+  align-self: end;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.search__arrow {
+  display: inline-block;
+  vertical-align: middle;
+  fill: #fff;
+  margin: 0;
+  transform: translate(-51%, -51%);
+  position: absolute;
+  top: 50%;
+  left: 93%;
+}
 
 .motto {
   position: absolute;
@@ -398,12 +269,9 @@ input[type="text"] {
   left: 1009px;
   right: 140px;
   bottom: 18px;
- 
 }
 
-
-
-.pMotto {
+.motto__text {
   font-size: 14px;
   margin: 0;
   text-align: right;
@@ -413,28 +281,175 @@ input[type="text"] {
 
 }
 
-.tCaption,
-.tSub,
-.tSup,
-.tAbUs {
+/* подвал и копирайт */
+.footer {
+  margin: 100px 140px 0 140px;
+  height: 172px;
+}
+
+.fNavigation {
+  display: grid;
+  grid-template-areas:
+    "fNavigation__description fNavigation__nav fNavigation__aboutus fNavigation__support fNavigation__subscription";
+  grid-template-columns: 260px 1fr 1fr 1fr 260px;
+  margin: 100px 140px;
+}
+
+.fNavigation__logo {
+  margin-bottom: 12px;
+}
+
+.fNavigation__text {
+  line-height: 18pt;
+  font-size: 14px;
+  margin: 0;
+  color: #1f2041;
+  opacity: 0.75;
+}
+
+.fNavigation__listNav,
+.fNavigation__listAbus,
+.fNavigation__listSup {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.fNavigation__listNav li,
+.fNavigation__listAbus li,
+.fNavigation__listSup li {
+  margin-top: 21px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.fNavigation__listNav li a,
+.fNavigation__listAbus li a,
+.fNavigation__listSup li a {
+  text-decoration: none;
+  color: #1f2041;
+  opacity: 0.5;
+}
+
+.fNavigation__listAbus {
+  padding-left: 28px;
+}
+
+.fNavigation__listSup {
+  padding-left: 13px;
+}
+
+.fNavigation__descriptionSub {
+  line-height: 24px;
+  margin: 19px 0 0 0;
+  font-size: 14px;
+}
+
+.fNavigation__textCaption,
+.fNavigation__textSub,
+.fNavigation__textSup,
+.fNavigation_textAbus {
   font-weight: bold;
   color: #1f2041;
   font-size: 12px;
 }
 
-.tCaption {
+.fNavigation__textCaption {
   margin: 3px 0 15px 40px;
 }
-.tAbUs {
+
+.fNavigation_textAbus {
   margin: 3px 0 15px 27px;
 }
-.tSup {
+
+.fNavigation__textSup {
   margin: 3px 0 15px 14px;
 }
-.tSub {
+
+.fNavigation__textSub {
   margin: 3px 0 15px 0px;
 }
 
+.fNavigation__mailText {
+  width: calc(100% - 54px);
+  height: 42px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border: 1px solid #1f2041;
+  border-right: 0;
+  padding: 0;
+  opacity: 0.25;
+  padding-left: 15px;
+  font-size: 14px;
+  font-family: inherit;
+}
 
+.fNavigation__mail {
+  display: flex;
+  margin-top: 21px;
+}
 
+.fNavigation__btnMail {
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  /* opacity: 0.25; */
+  border-left: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  vertical-align: top;
+  align-items: flex-start;
+  position: relative;
+}
 
+.copBar {
+  display: grid;
+  grid-template-areas: "copBar__copyright copBar__networks";
+  grid-template-columns: 1fr 1fr;
+  height: 70px;
+  margin: 0 140px;
+}
+
+.copBar__copyright {
+  grid-area: copBar__copyright;
+  align-self: center;
+}
+
+.copBar__copyright p {
+  margin: 0;
+  font-size: 14px;
+  color: #1f2041;
+  opacity: 0.75;
+}
+
+.copBar__networks {
+  grid-area: copBar__networks;
+  margin: 0;
+  justify-self: end;
+  align-self: center;
+}
+
+.copBar__twitter,
+.copBar__facebook,
+.copBar__instagram {
+  width: 26px;
+  height: 26px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.copBar__twitter {
+  background: url(/footer/img/twitter.png) no-repeat 50% 50%;
+}
+
+.copBar__facebook {
+  background: url(/footer/img/facebook.png) no-repeat 50% 50%;
+}
+
+.copBar__instagram {
+  background: url(/footer/img/instagram.png) no-repeat 50% 50%;
+}

@@ -13,65 +13,54 @@
     />
   </head>
   <body>
-
-
-
-
-
-    <header class="header">
-      <div class="header__logo">
+    <header>
+      <div class="logo">
         <img src="/header/img/logo.svg" alt="logo" />
       </div>
-      <nav class="header__navigation">
-        <ul class="header__list">
+      <nav class="navigation">
+        <ul class="navigation__list">
           <li>
-            <a class="header__link" href="#">О нас</a>
+            <a class="navigation__link" href="#">О нас</a>
           </li>
           <li>
-            <a class="header__link header__link__more" href="#"
-              >Услуги <img class="arrow" src="/header/img/arrow.svg"
+            <a class="navigation__link navigation__link__more" href="#"
+              >Услуги
+              <img class="navigation__arrow" src="/header/img/arrow.svg"
             /></a>
           </li>
           <li>
-            <a class="header__link" href="#"> Вакансии</a>
+            <a class="navigation__link" href="#"> Вакансии</a>
           </li>
-          <li><a class="header__link" href="#">Новости</a></li>
+          <li><a class="navigation__link" href="#">Новости</a></li>
           <li>
-            <a class="header__link" href="#">
+            <a class="navigation__link" href="#">
               Соглашения <img class="arrow" src="/header/img/arrow.svg"
             /></a>
           </li>
         </ul>
       </nav>
-      <div class="header__account">
-        <a class="header__enter" href="#" title="Войти">ВОЙТИ</a>
-        <a class="header__registration" href="#" title="зарегистрироваться"
+      <div class="account">
+        <a class="account__enter" href="#" title="Войти">ВОЙТИ</a>
+        <a class="account__registration" href="#" title="зарегистрироваться"
           >ЗАРЕГИСТРИРОВАТЬСЯ</a
         >
       </div>
     </header>
-
-
-
-
-
-
-
-    <main class="main">
-      <div class="main__search">
-        <p class="main__title">Найдём номера под ваши пожелания</p>
-        <div class="main__arrival">
-          <p class="main__textArrival">ПРИБЫТИЕ</p>
+    <main>
+      <div class="search">
+        <p class="search__title">Найдём номера под ваши пожелания</p>
+        <div class="search__arrival">
+          <p class="search__textArrival">ПРИБЫТИЕ</p>
           <input type="date" />
         </div>
-        <div class="main__departure">
-          <p class="main__textDeparture">ВЫЕЗД</p>
+        <div class="search__departure">
+          <p class="search__textDeparture">ВЫЕЗД</p>
           <input type="date" />
         </div>
-        <div class="main__guests">
+        <div class="search__guests">
           <form>
-            <p class="main__textGuests">ГОСТИ</p>
-            <select name="main__selectGuests">
+            <p class="search__textGuests">ГОСТИ</p>
+            <select name="search__selectGuests">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -79,96 +68,86 @@
             </select>
           </form>
         </div>
-        <button class="main_find" id="bF" type="submit" title="Найти">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z"
-              fill="white"
-            />
-          </svg>
+        <button class="search__find" type="submit" title="Найти">
+          <img
+            class="search__arrow"
+            src="/main/img/arrow_button.svg"
+            alt="arrow"
+          />
           ПОДОБРАТЬ НОМЕР
         </button>
       </div>
-      <div class="main__motto">
-        <p class="pMotto">
+      <div class="motto">
+        <p class="motto__text">
           Лучшие номера для вашей работы, отдых и просто вдохновения
         </p>
       </div>
     </main>
-
-
-
-
-    <footer class="footer">
-      <div class="footNav">
-        <div class="description">
-          <div class="flogo">
+    <footer>
+      <div class="fNavigation">
+        <div class="fNavigation__description">
+          <div class="fNavigation__logo">
             <img src="/header/img/logo.svg" alt="logo" />
           </div>
-          <p class="fText">
+          <p class="fNavigation__text">
             Бронирование номеров в лучшем отеле 2019 года по версии ассоциации
             «Отельные взгляды»
           </p>
         </div>
-        <div class="fNavigation">
-          <p class="tCaption">НАВИГАЦИЯ</p>
-          <ul class="fNav">
+        <div class="fNavigation__nav">
+          <p class="fNavigation__textCaption">НАВИГАЦИЯ</p>
+          <ul class="fNavigation__listNav">
             <li><a href="#">О нас</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="#">Служба поддержки</a></li>
             <li><a href="#">Услуги</a></li>
           </ul>
         </div>
-        <div class="fAboutUs">
-          <p class="tAbUs">О НАС</p>
-          <ul class="fAbUs">
+        <div class="fNavigation__aboutus">
+          <p class="fNavigation_textAbus">О НАС</p>
+          <ul class="fNavigation__listAbus">
             <li><a href="#">О сервисе</a></li>
             <li><a href="#">Наша команда</a></li>
             <li><a href="#">Вакансии</a></li>
             <li><a href="#">Инвесторы</a></li>
           </ul>
         </div>
-        <div class="fSupport">
-          <p class="tSup">СЛУЖБА ПОДДЕРЖКИ</p>
-          <ul class="fSup">
+        <div class="fNavigation__support">
+          <p class="fNavigation__textSup">СЛУЖБА ПОДДЕРЖКИ</p>
+          <ul class="fNavigation__listSup">
             <li><a href="#">Соглашения</a></li>
             <li><a href="#">Сообщества</a></li>
             <li><a href="#">Связь с нами</a></li>
           </ul>
         </div>
-        <div class="fSubscription">
-          <p class="tSub">ПОДПИСКА</p>
-          <p class="fSub">
+        <div class="fNavigation__subscription">
+          <p class="fNavigation__textSub">ПОДПИСКА</p>
+          <p class="fNavigation__descriptionSub">
             Получайте специальные предложения и новости сервиса
           </p>
-          <form action="#" method="POST" class="Mail">
+          <form action="#" method="POST" class="fNavigation__mail">
             <input
               type="text"
               placeholder="Email"
-              class="mail_text"
+              class="fNavigation__mailText"
               name="email"
             />
-            <button class="btnMail" type="submit">
-              <img class="arrow_forward" src="/footer/img/arrow_forward.png" />
+            <button class="fNavigation__btnMail" type="submit">
+              <img src="/footer/img/arrow_forward.png" />
             </button>
           </form>
         </div>
       </div>
+
       <div class="copBar">
-        <div class="copyright">
+        <div class="copBar__copyright">
           <p>Copyright © 2018 Toxin отель. Все права защищены.</p>
         </div>
-      <div class="networks">
-        <button type="submit" class="twitter"></button>
-        <button type="submit" class="facebook"></button>
-        <button type="submit" class="instagram"></button>
-      </div>
+        <div class="copBar__networks">
+          <button type="submit" class="copBar__twitter"></button>
+          <button type="submit" class="copBar__facebook"></button>
+          <button type="submit" class="copBar__instagram"></button>
+        </div>
       </div>
     </footer>
   </body>
