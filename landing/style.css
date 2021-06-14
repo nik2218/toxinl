@@ -123,7 +123,7 @@ header {
 
 /* основная часть */
 main {
-  background-image: url(/main/img/image\ 3.png);
+  background-image: url(/landing/main/img/image\ 3.png);
   min-height: 763px;
   min-width: none;
   background-size: cover;
@@ -178,7 +178,7 @@ main {
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 1;
-  background: url(img/arrow.svg) no-repeat;
+  background: url(/landing/header/img/arrow.svg) no-repeat;
   background-size: initial;
   transform: translate(-45%, 41%);
   top: 45%;
@@ -230,7 +230,7 @@ select {
   border-radius: 4px;
   width: 320px;
   height: 44px;
-  background: url(/main/img/arrow.svg) no-repeat 95% 50%;
+  background: url(/landing/main/img/arrow.svg) no-repeat 95% 50%;
   border: 1px solid #1f2041;
   opacity: 0.5;
 }
@@ -443,13 +443,13 @@ select {
 }
 
 .copBar__twitter {
-  background: url(/footer/img/twitter.png) no-repeat 50% 50%;
+  background: url(/landing/footer/img/twitter.png) no-repeat 50% 50%;
 }
 
 .copBar__facebook {
-  background: url(/footer/img/facebook.png) no-repeat 50% 50%;
+  background: url(/landing/footer/img/facebook.png) no-repeat 50% 50%;
 }
 
 .copBar__instagram {
-  background: url(/footer/img/instagram.png) no-repeat 50% 50%;
+  background: url(/landing/footer/img/instagram.png) no-repeat 50% 50%;
 }
