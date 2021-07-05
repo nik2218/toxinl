@@ -16,7 +16,8 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 140px 0px;
 }
-header .logo {
+
+.logo {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
@@ -25,13 +26,14 @@ header .logo {
   -ms-grid-row-align: center;
       align-self: center;
 }
-header .navigation {
+
+.navigation {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
   grid-area: navigation;
 }
-header .navigation .navigation__list {
+.navigation .navigation__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,15 +52,15 @@ header .navigation .navigation__list {
   -webkit-margin-after: 0;
           margin-block-end: 0;
 }
-header .navigation .navigation__list a:nth-child(2) {
+.navigation .navigation__list a:nth-child(2) {
   margin-right: 20px;
 }
-header .navigation .navigation__link__more {
+.navigation .navigation__link__more {
   -webkit-column-gap: 0;
      -moz-column-gap: 0;
           column-gap: 0;
 }
-header .navigation .navigation__link {
+.navigation .navigation__link {
   display: block;
   margin: 26px 0 26px 0;
   text-decoration: none;
@@ -67,10 +69,11 @@ header .navigation .navigation__link {
   opacity: 0.5;
   font-size: 0.875em;
 }
-header .navigation .navigation__arrow {
+.navigation .navigation__arrow {
   margin-left: 2px;
 }
-header .account {
+
+.account {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 3;
@@ -81,7 +84,7 @@ header .account {
   -ms-grid-column-align: end;
       justify-self: end;
 }
-header .account__enter {
+.account .account__enter {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -94,7 +97,7 @@ header .account__enter {
   margin-right: 17px;
   font-weight: bold;
 }
-header .account__enter::after {
+.account .account__enter::after {
   content: " ";
   display: block;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
@@ -107,7 +110,7 @@ header .account__enter::after {
   height: calc(100% + 2px);
   border-radius: 22px;
 }
-header .account__registration {
+.account .account__registration {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -120,7 +123,7 @@ header .account__registration {
   border-radius: 22px;
   font-weight: bold;
 }
-header .account__registration::after {
+.account .account__registration::after {
   content: " ";
   display: block;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
@@ -144,7 +147,8 @@ main {
   /* background-position: top; */
   padding-top: 4.2em;
 }
-main .search {
+
+.search {
   border-radius: 4px;
   display: -ms-grid;
   display: grid;
@@ -165,7 +169,7 @@ main .search {
      -moz-column-gap: 20px;
           column-gap: 20px;
 }
-main .search .search__title {
+.search .search__title {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
@@ -177,7 +181,7 @@ main .search .search__title {
   font-size: 1.5em;
   font-weight: 900;
 }
-main .search .search__arrival {
+.search .search__arrival {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -185,14 +189,14 @@ main .search .search__arrival {
   height: 65px;
   width: 150px;
 }
-main .search .search__textArrival,
-main .search .search__textDeparture {
+.search .search__textArrival,
+.search .search__textDeparture {
   margin: 0 0 5.44px 0;
   color: #1f2041;
   font-weight: bold;
   font-size: 0.75rem;
 }
-main .search input[type=date]::-webkit-calendar-picker-indicator {
+.search input[type=date]::-webkit-calendar-picker-indicator {
   background: url(/landing/source/img/arrow.svg) no-repeat;
   background-size: initial;
   -webkit-transform: translate(-45%, 41%);
@@ -202,7 +206,7 @@ main .search input[type=date]::-webkit-calendar-picker-indicator {
   width: 14px;
   height: 20px;
 }
-main .search input[type=date] {
+.search input[type=date] {
   width: 150px;
   height: 44px;
   border-radius: 4px;
@@ -214,29 +218,29 @@ main .search input[type=date] {
   margin: 0;
   padding: 0;
 }
-main .search input[type=text] {
+.search input[type=text] {
   margin: 0;
 }
-main .search .search__departure {
+.search .search__departure {
   -ms-grid-row: 2;
   -ms-grid-column: 5;
   -ms-grid-column-span: 3;
   grid-area: search__departure;
 }
-main .search .search__guests {
+.search .search__guests {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: search__guests;
   border-color: #1f2041;
 }
-main .search .search__textGuests {
+.search .search__textGuests {
   margin: 0 0 5px 0;
   font-size: 0.75rem;
   font-weight: bold;
   text-align: top;
 }
-main .search select {
+.search select {
   text-indent: 15px;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -248,7 +252,7 @@ main .search select {
   border: 1px solid #1f2041;
   opacity: 0.5;
 }
-main .search .search__find {
+.search .search__find {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
@@ -269,7 +273,7 @@ main .search .search__find {
   font-size: 0.75rem;
   cursor: pointer;
 }
-main .search .search__arrow {
+.search .search__arrow {
   display: inline-block;
   vertical-align: middle;
   fill: #fff;
@@ -280,14 +284,15 @@ main .search .search__arrow {
   top: 50%;
   left: 93%;
 }
-main .motto {
+
+.motto {
   position: absolute;
   top: 836px;
   left: 1009px;
   right: 140px;
   bottom: 18px;
 }
-main .motto__text {
+.motto .motto__text {
   font-size: 0.875em;
   margin: 0;
   text-align: right;
@@ -297,79 +302,87 @@ main .motto__text {
 }
 
 /* подвал и копирайт */
-footer .fNavigation {
+.fNavigation {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "fNavigation__description fNavigation__nav fNavigation__aboutus fNavigation__support fNavigation__subscription";
   -ms-grid-columns: 260px 1fr 1fr 1fr 260px;
   grid-template-columns: 260px 1fr 1fr 1fr 260px;
-  margin: 100px 140px;
+  padding: 100px 140px 0 140px;
 }
-footer .fNavigation__logo {
+
+.fNavigation__logo {
   margin-bottom: 12px;
 }
-footer .fNavigation__text {
+
+.fNavigation__text {
   line-height: 18pt;
   font-size: 0.875em;
   margin: 0;
   color: #1f2041;
   opacity: 0.75;
 }
-footer .fNavigation__listNav,
-footer .fNavigation__listAbus,
-footer .fNavigation__listSup {
+
+.footul {
   list-style-type: none;
   -webkit-margin-before: 0;
           margin-block-start: 0;
   -webkit-margin-after: 0;
           margin-block-end: 0;
 }
-footer .fNavigation__listNav li,
-footer .fNavigation__listAbus li,
-footer .fNavigation__listSup li {
+
+.footul li {
   margin-top: 21px;
   font-size: 0.875em;
   text-decoration: none;
 }
-footer .fNavigation__listNav li a,
-footer .fNavigation__listAbus li a,
-footer .fNavigation__listSup li a {
+
+.footul li a {
   text-decoration: none;
   color: #1f2041;
   opacity: 0.5;
 }
-footer .fNavigation__listAbus {
+
+.fNavigation__listAbus {
   padding-left: 28px;
 }
-footer .fNavigation__listSup {
+
+.fNavigation__listSup {
   padding-left: 13px;
 }
-footer .fNavigation__descriptionSub {
+
+.fNavigation__descriptionSub {
   line-height: 24px;
   margin: 19px 0 0 0;
   font-size: 0.875em;
 }
-footer .fNavigation__textCaption,
-footer .fNavigation__textSub,
-footer .fNavigation__textSup,
-footer .fNavigation_textAbus {
+
+.fNavigation__textCaption,
+.fNavigation__textSub,
+.fNavigation__textSup,
+.fNavigation_textAbus {
   font-weight: bold;
   color: #1f2041;
   font-size: 0.75rem;
 }
-footer .fNavigation__textCaption {
+
+.fNavigation__textCaption {
   margin: 3px 0 15px 40px;
 }
-footer .fNavigation_textAbus {
+
+.fNavigation_textAbus {
   margin: 3px 0 15px 27px;
 }
-footer .fNavigation__textSup {
+
+.fNavigation__textSup {
   margin: 3px 0 15px 14px;
 }
-footer .fNavigation__textSub {
+
+.fNavigation__textSub {
   margin: 3px 0 15px 0px;
 }
-footer .fNavigation__mailText {
+
+.fNavigation__mailText {
   width: calc(100% - 54px);
   height: 42px;
   border-top-left-radius: 4px;
@@ -382,13 +395,15 @@ footer .fNavigation__mailText {
   font-size: 0.875em;
   font-family: inherit;
 }
-footer .fNavigation__mail {
+
+.fNavigation__mail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 21px;
+  margin-top: 23px;
 }
-footer .fNavigation__btnMail {
+
+.fNavigation__btnMail {
   padding: 0;
   width: 44px;
   height: 44px;
@@ -404,29 +419,36 @@ footer .fNavigation__btnMail {
           align-items: flex-start;
   position: relative;
 }
-footer .copBar {
+
+.copBar {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "copBar__copyright copBar__networks";
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   height: 70px;
-  margin: 0 140px;
+  margin-top: 101px;
+  -webkit-box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.25);
+          box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.25);
+  padding: 0 140px 0 140px;
 }
-footer .copBar__copyright {
+
+.copBar__copyright {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: copBar__copyright;
   -ms-grid-row-align: center;
       align-self: center;
 }
-footer .copBar__copyright p {
+
+.copBar__copyright p {
   margin: 0;
   font-size: 0.875em;
   color: #1f2041;
   opacity: 0.75;
 }
-footer .copBar__networks {
+
+.copBar__networks {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: copBar__networks;
@@ -436,21 +458,25 @@ footer .copBar__networks {
   -ms-grid-row-align: center;
       align-self: center;
 }
-footer .copBar__twitter,
-footer .copBar__facebook,
-footer .copBar__instagram {
+
+.btn_foot {
   width: 26px;
   height: 26px;
   border: none;
   cursor: pointer;
   padding: 0;
+  margin-right: 14px;
 }
-footer .copBar__twitter {
+
+.copBar__twitter {
   background: url(/landing/source/img/twitter.png) no-repeat 50% 50%;
 }
-footer .copBar__facebook {
+
+.copBar__facebook {
   background: url(/landing/source/img/facebook.png) no-repeat 50% 50%;
 }
-footer .copBar__instagram {
+
+.copBar__instagram {
   background: url(/landing/source/img/instagram.png) no-repeat 50% 50%;
+  margin-right: 0;
 }
