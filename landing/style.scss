@@ -8,12 +8,13 @@ $grad:linear-gradient(#bc9cff, #8ba4f9);
 $PurCol:#bc9cff;
 $GreColor:#6fcf97;
 $MainColor:#1f2041;
+$fontFam: "Montserrat", sans-serif;
 html{
 	font-size: 14px;
 }
 body {
 	background-color: #ffff;
-	font-family: "Montserrat", sans-serif;
+	font-family: $fontFam;
 	margin: 0;
 	padding: 0;
 }
@@ -26,7 +27,7 @@ body {
 		  "logo navigation account"
 		  "logo navigation account";
 		grid-template-columns: 33.33% 33.33% 33.33%;
-		padding: 0 10em;
+		padding: 0 9.723%;
 }
  .logo {
 	grid-area: logo;
@@ -130,7 +131,6 @@ body {
 		min-width: none;
 		background-size: cover;
 		background-repeat: no-repeat;
-		/* background-position: top; */
 		padding-top: 4.2em;
  }
  .search {
@@ -149,7 +149,7 @@ body {
 	  "search__arrival search__arrival search__departure search__departure"
 	  "search__guests search__guests search__guests search__guests"
 	  "search__find search__find search__find search__find";
-	grid-template-rows: 27.4% 27.6% 24% 21.5%;
+	grid-template-rows: 27.4% 27.6% 24% 22%;
 	column-gap: 6.5%;
 	 .search__title {
 		grid-area: search__title;
@@ -157,52 +157,58 @@ body {
 		padding-top: 1%;
 		text-align: left;
 		color: $MainColor;
-		font-size: 1.714rem;
+		font-size: 1.714em;
 		font-weight: 900;
 	 }
 	 .search__arrival {
 		grid-area: search__arrival;
-		height: 65px;
+		height: 82%;
 		width: 150px;
 	 }
 	 .search__textArrival,
 	 .search__textDeparture {
-	margin: 0 0 0.4em 0;
-	color: $MainColor;
-	font-weight: 700;
-	font-size: $fz12;
-	padding-top: 0.5%;
- }
+		margin: 0;
+		margin-bottom: 0.389em;
+		color: $MainColor;
+		font-weight: 700;
+		font-size: $fz12;
+		font-family: inherit;
+	}
  input[type="date"]::-webkit-calendar-picker-indicator {
 	background: url(/landing/source/img/arrow.svg) no-repeat;
 	background-size: initial;
-	transform: translate(-45%, 41%);
-	top: 45%;
-	left: 41%;
-	width: 14px;
-	height: 20px;
+	transform: translate(-10%, 38%);
+	flex-basis: content;
+	margin: 0;
+	padding: 3%;
  }
- 
+ input[type="date"]::-webkit-datetime-edit { 
+	 font-size: 14px;
+	 font-weight: 400;
+	 opacity: $op75;
+	 text-transform: uppercase;
+	 font-family: $fontFam;
+ }
  input[type = "date"] {
+	font-family: inherit;
 	width: 150px;
-	height: 44px;
+	height: 62%;
+	box-sizing: border-box;
 	border-radius: 4px;
 	border-width: 1px;
-	// border-color: #1f2041;
-	font-size: $fz14;
-	// color: #1f2041;
-	font-family: inherit;
+	// font-size: 17px;
 	text-align: center;
 	line-height: 18pt;
+	font-weight: 400;
+	border: 1px solid rgb(31 32 65 / 0.25) ;
+	
 	margin: 0;
 	padding: 0;
  }
- 
- input[type="text"] {
-	margin: 0;
- }
  .search__departure {
 	grid-area: search__departure;
+	height: 82%;
+	width: 150px;
  }
  
  .search__guests {
@@ -226,10 +232,9 @@ body {
 	width: 320px;
 	height: 44px;
 	background: url(/landing/source/img/arrow.svg) no-repeat 95% 50%;
-	border: 1px solid $MainColor;
+	border: 1px solid rgb(31 32 65 / 0.25);
 	opacity: $op5;
  }
- 
  .search__find {
 	grid-area: search__find;
 	height: 44px;
@@ -237,7 +242,7 @@ body {
 	position: relative;
 	text-decoration: none;
 	width: 320px;
-	font-weight: bold;
+	font-weight: 700;
 	border-radius: 22px;
 	background: $grad;
 	border: none;
@@ -245,6 +250,7 @@ body {
 	align-self: end;
 	font-size: $fz12;
 	cursor: pointer;
+	font-family: inherit;
  }
  
  .search__arrow {
@@ -281,15 +287,15 @@ body {
 	grid-template-areas:
 	  "fNavigation__description fNavigation__nav fNavigation__aboutus fNavigation__support fNavigation__subscription";
 	grid-template-columns: 260px 1fr 1fr 1fr 260px;
-	padding: 100px 140px 0 140px;
+	padding: 6.945% 9.723% 0 9.723%;
 }
-.fNavigation__logo {
-	margin-bottom: 12px;
-}
+
 .fNavigation__text {
-   line-height: 18pt;
+	line-height: 18pt;
   	font-size: $fz14;
-   margin: 0;
+	padding: 0;
+    margin: 0;
+	padding-top: 5%;
 	color: $MainColor;
 	opacity: $op75;
 }
@@ -297,26 +303,35 @@ body {
 	list-style-type: none;
 	margin-block-start: 0;
 	margin-block-end: 0;
-}
-.footul li {
-	margin-top: 21px;
-	font-size: $fz14;
 	text-decoration: none;
+	li a{
+		text-decoration: none;
+		color: $MainColor;
+		opacity: $op5;
+		padding: 0;
+		margin: 0;
+	}
 }
-.footul li a {
-	text-decoration: none;
-	color: $MainColor;
-	opacity: $op5;
+.footnav{
+	li{
+		margin-bottom: 11.5%;
+	}
 }
 .fNavigation__listAbus {
-	padding-left: 28px;
+	padding-left: 12.5%;
+	li{
+		margin-bottom: 10.5%;
+	}
 }
 .fNavigation__listSup {
-	padding-left: 13px;
+	padding-left: 6%;
+	li{
+		margin-bottom: 10%;
+	}
 }
 .fNavigation__descriptionSub {
-	line-height: 24px;
-	margin: 19px 0 0 0;
+	line-height: 179%;
+	margin: 7.3% 0 0 0;
 	font-size: $fz14;
 }
 .fNavigation__textCaption,
@@ -328,17 +343,20 @@ body {
 	font-size: $fz12;
 }
 .fNavigation__textCaption {
-	margin: 3px 0 15px 40px;
+	margin: 1.5% 0 10% 19%;
 }
 .fNavigation_textAbus {
-	margin: 3px 0 15px 27px;
+	margin: 1.5% 0 10% 12.5%;
 }
 .fNavigation__textSup {
-	margin: 3px 0 15px 14px;
+	margin: 1.5% 0 10% 6%;
 }
 .fNavigation__textSub {
-	margin: 3px 0 15px 0px;
+	margin: 1.2% 0 0 0;
 }
+input[type="text"] {
+	margin: 0;
+ }
 .fNavigation__mailText {
 	width: calc(100% - 54px);
 	height: 42px;
@@ -376,9 +394,9 @@ body {
 	grid-template-areas: "copBar__copyright copBar__networks";
 	grid-template-columns: 1fr 1fr;
 	height: 70px;
-	margin-top: 101px;
+	margin-top: 5.75%;
 	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.25);
-	padding: 0 140px 0 140px;
+	padding: 0 9.723%;
 }
 .copBar__copyright {
 	grid-area: copBar__copyright;

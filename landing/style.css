@@ -18,7 +18,7 @@ body {
       grid-template-areas: "logo navigation account" "logo navigation account" "logo navigation account";
   -ms-grid-columns: 33.33% 33.33% 33.33%;
   grid-template-columns: 33.33% 33.33% 33.33%;
-  padding: 0 10em;
+  padding: 0 9.723%;
 }
 
 .logo {
@@ -148,7 +148,6 @@ main {
   min-width: none;
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position: top; */
   padding-top: 4.2em;
 }
 
@@ -167,8 +166,8 @@ main {
   -ms-grid-columns: 25% 6.5% 15% 6.5% 25% 6.5% 15.5%;
   grid-template-columns: 25% 15% 25% 15.5%;
       grid-template-areas: "search__title search__title search__title search__title" "search__arrival search__arrival search__departure search__departure" "search__guests search__guests search__guests search__guests" "search__find search__find search__find search__find";
-  -ms-grid-rows: 27.4% 27.6% 24% 21.5%;
-  grid-template-rows: 27.4% 27.6% 24% 21.5%;
+  -ms-grid-rows: 27.4% 27.6% 24% 22%;
+  grid-template-rows: 27.4% 27.6% 24% 22%;
   -webkit-column-gap: 6.5%;
      -moz-column-gap: 6.5%;
           column-gap: 6.5%;
@@ -182,7 +181,7 @@ main {
   padding-top: 1%;
   text-align: left;
   color: #1f2041;
-  font-size: 1.714rem;
+  font-size: 1.714em;
   font-weight: 900;
 }
 .search .search__arrival {
@@ -190,47 +189,56 @@ main {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: search__arrival;
-  height: 65px;
+  height: 82%;
   width: 150px;
 }
 .search .search__textArrival,
 .search .search__textDeparture {
-  margin: 0 0 0.4em 0;
+  margin: 0;
+  margin-bottom: 0.389em;
   color: #1f2041;
   font-weight: 700;
   font-size: 0.875em;
-  padding-top: 0.5%;
+  font-family: inherit;
 }
 .search input[type=date]::-webkit-calendar-picker-indicator {
   background: url(/landing/source/img/arrow.svg) no-repeat;
   background-size: initial;
-  -webkit-transform: translate(-45%, 41%);
-          transform: translate(-45%, 41%);
-  top: 45%;
-  left: 41%;
-  width: 14px;
-  height: 20px;
+  -webkit-transform: translate(-10%, 38%);
+          transform: translate(-10%, 38%);
+  flex-basis: content;
+  margin: 0;
+  padding: 3%;
+}
+.search input[type=date]::-webkit-datetime-edit {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.75;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
 }
 .search input[type=date] {
+  font-family: inherit;
   width: 150px;
-  height: 44px;
+  height: 62%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 4px;
   border-width: 1px;
-  font-size: 1em;
-  font-family: inherit;
   text-align: center;
   line-height: 18pt;
+  font-weight: 400;
+  border: 1px solid rgba(31, 32, 65, 0.25);
   margin: 0;
   padding: 0;
-}
-.search input[type=text] {
-  margin: 0;
 }
 .search .search__departure {
   -ms-grid-row: 2;
   -ms-grid-column: 5;
   -ms-grid-column-span: 3;
   grid-area: search__departure;
+  height: 82%;
+  width: 150px;
 }
 .search .search__guests {
   -ms-grid-row: 3;
@@ -255,7 +263,7 @@ main {
   width: 320px;
   height: 44px;
   background: url(/landing/source/img/arrow.svg) no-repeat 95% 50%;
-  border: 1px solid #1f2041;
+  border: 1px solid rgba(31, 32, 65, 0.25);
   opacity: 0.5;
 }
 .search .search__find {
@@ -268,7 +276,7 @@ main {
   position: relative;
   text-decoration: none;
   width: 320px;
-  font-weight: bold;
+  font-weight: 700;
   border-radius: 22px;
   background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
   background: linear-gradient(#bc9cff, #8ba4f9);
@@ -278,6 +286,7 @@ main {
       align-self: end;
   font-size: 0.875em;
   cursor: pointer;
+  font-family: inherit;
 }
 .search .search__arrow {
   display: inline-block;
@@ -314,17 +323,15 @@ main {
       grid-template-areas: "fNavigation__description fNavigation__nav fNavigation__aboutus fNavigation__support fNavigation__subscription";
   -ms-grid-columns: 260px 1fr 1fr 1fr 260px;
   grid-template-columns: 260px 1fr 1fr 1fr 260px;
-  padding: 100px 140px 0 140px;
-}
-
-.fNavigation__logo {
-  margin-bottom: 12px;
+  padding: 6.945% 9.723% 0 9.723%;
 }
 
 .fNavigation__text {
   line-height: 18pt;
   font-size: 1em;
+  padding: 0;
   margin: 0;
+  padding-top: 5%;
   color: #1f2041;
   opacity: 0.75;
 }
@@ -335,31 +342,37 @@ main {
           margin-block-start: 0;
   -webkit-margin-after: 0;
           margin-block-end: 0;
-}
-
-.footul li {
-  margin-top: 21px;
-  font-size: 1em;
   text-decoration: none;
 }
-
 .footul li a {
   text-decoration: none;
   color: #1f2041;
   opacity: 0.5;
+  padding: 0;
+  margin: 0;
+}
+
+.footnav li {
+  margin-bottom: 11.5%;
 }
 
 .fNavigation__listAbus {
-  padding-left: 28px;
+  padding-left: 12.5%;
+}
+.fNavigation__listAbus li {
+  margin-bottom: 10.5%;
 }
 
 .fNavigation__listSup {
-  padding-left: 13px;
+  padding-left: 6%;
+}
+.fNavigation__listSup li {
+  margin-bottom: 10%;
 }
 
 .fNavigation__descriptionSub {
-  line-height: 24px;
-  margin: 19px 0 0 0;
+  line-height: 179%;
+  margin: 7.3% 0 0 0;
   font-size: 1em;
 }
 
@@ -373,19 +386,23 @@ main {
 }
 
 .fNavigation__textCaption {
-  margin: 3px 0 15px 40px;
+  margin: 1.5% 0 10% 19%;
 }
 
 .fNavigation_textAbus {
-  margin: 3px 0 15px 27px;
+  margin: 1.5% 0 10% 12.5%;
 }
 
 .fNavigation__textSup {
-  margin: 3px 0 15px 14px;
+  margin: 1.5% 0 10% 6%;
 }
 
 .fNavigation__textSub {
-  margin: 3px 0 15px 0px;
+  margin: 1.2% 0 0 0;
+}
+
+input[type=text] {
+  margin: 0;
 }
 
 .fNavigation__mailText {
@@ -433,10 +450,10 @@ main {
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   height: 70px;
-  margin-top: 101px;
+  margin-top: 5.75%;
   -webkit-box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.25);
           box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.25);
-  padding: 0 140px 0 140px;
+  padding: 0 9.723%;
 }
 
 .copBar__copyright {
