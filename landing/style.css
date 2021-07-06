@@ -1,20 +1,24 @@
 @charset "UTF-8";
+html {
+  font-size: 14px;
+}
+
 body {
   background-color: #ffff;
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  max-width: 1900px;
 }
 
 /* шапка */
-header {
+.container {
+  max-width: 1900px;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "logo navigation account" "logo navigation account" "logo navigation account";
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 0 140px 0px;
+  -ms-grid-columns: 33.33% 33.33% 33.33%;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  padding: 0 10em;
 }
 
 .logo {
@@ -22,7 +26,7 @@ header {
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   grid-area: logo;
-  padding-top: 0.188em;
+  padding-top: 0.214em;
   -ms-grid-row-align: center;
       align-self: center;
 }
@@ -43,7 +47,7 @@ header {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   grid-area: header__list;
-  font-size: 0.875em;
+  font-size: 1em;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
   list-style-type: none;
@@ -53,7 +57,7 @@ header {
           margin-block-end: 0;
 }
 .navigation .navigation__list a:nth-child(2) {
-  margin-right: 20px;
+  margin-right: 1.43em;
 }
 .navigation .navigation__link__more {
   -webkit-column-gap: 0;
@@ -62,12 +66,12 @@ header {
 }
 .navigation .navigation__link {
   display: block;
-  margin: 26px 0 26px 0;
+  margin: 1.86em 0 1.86em 0;
   text-decoration: none;
-  margin-right: 23px;
+  margin-right: 1.64em;
   color: #1f2041;
   opacity: 0.5;
-  font-size: 0.875em;
+  font-size: 1em;
 }
 .navigation .navigation__arrow {
   margin-left: 2px;
@@ -78,7 +82,7 @@ header {
   -ms-grid-row-span: 3;
   -ms-grid-column: 3;
   grid-area: account;
-  font-size: 0.75rem;
+  font-size: 0.875em;
   -ms-grid-row-align: center;
       align-self: center;
   -ms-grid-column-align: end;
@@ -88,7 +92,7 @@ header {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  font-size: 0.75rem;
+  font-size: 0.875em;
   text-decoration: none;
   padding: 8px 20px;
   color: #bc9cff;
@@ -114,7 +118,7 @@ header {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  font-size: 0.75rem;
+  font-size: 0.875em;
   text-decoration: none;
   padding: 8px 19px;
   color: #ffff;
@@ -153,21 +157,21 @@ main {
   display: -ms-grid;
   display: grid;
   margin-left: 140px;
-  max-width: 320px;
-  max-height: 304px;
+  width: 320px;
+  height: 304px;
   padding: 39px 29px 29px;
   background-color: white;
-  border: 1px solid #e8e8ec;
+  border: 1px solid rgba(31, 32, 65, 0.25);
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25), 0px 0px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25), 0px 0px 0px rgba(0, 0, 0, 0.25);
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 25% 6.5% 15% 6.5% 25% 6.5% 15.5%;
+  grid-template-columns: 25% 15% 25% 15.5%;
       grid-template-areas: "search__title search__title search__title search__title" "search__arrival search__arrival search__departure search__departure" "search__guests search__guests search__guests search__guests" "search__find search__find search__find search__find";
-  -ms-grid-rows: 80px 85px 85px 56px;
-  grid-template-rows: 80px 85px 85px 56px;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
+  -ms-grid-rows: 27.4% 27.6% 24% 21.5%;
+  grid-template-rows: 27.4% 27.6% 24% 21.5%;
+  -webkit-column-gap: 6.5%;
+     -moz-column-gap: 6.5%;
+          column-gap: 6.5%;
 }
 .search .search__title {
   -ms-grid-row: 1;
@@ -175,10 +179,10 @@ main {
   -ms-grid-column-span: 7;
   grid-area: search__title;
   margin: 0;
-  padding: 0;
+  padding-top: 1%;
   text-align: left;
   color: #1f2041;
-  font-size: 1.5em;
+  font-size: 1.714rem;
   font-weight: 900;
 }
 .search .search__arrival {
@@ -191,10 +195,11 @@ main {
 }
 .search .search__textArrival,
 .search .search__textDeparture {
-  margin: 0 0 5.44px 0;
+  margin: 0 0 0.4em 0;
   color: #1f2041;
-  font-weight: bold;
-  font-size: 0.75rem;
+  font-weight: 700;
+  font-size: 0.875em;
+  padding-top: 0.5%;
 }
 .search input[type=date]::-webkit-calendar-picker-indicator {
   background: url(/landing/source/img/arrow.svg) no-repeat;
@@ -211,7 +216,7 @@ main {
   height: 44px;
   border-radius: 4px;
   border-width: 1px;
-  font-size: 0.875em;
+  font-size: 1em;
   font-family: inherit;
   text-align: center;
   line-height: 18pt;
@@ -235,8 +240,9 @@ main {
   border-color: #1f2041;
 }
 .search .search__textGuests {
+  padding-top: 0.5%;
   margin: 0 0 5px 0;
-  font-size: 0.75rem;
+  font-size: 0.875em;
   font-weight: bold;
   text-align: top;
 }
@@ -270,7 +276,7 @@ main {
   color: #fff;
   -ms-grid-row-align: end;
       align-self: end;
-  font-size: 0.75rem;
+  font-size: 0.875em;
   cursor: pointer;
 }
 .search .search__arrow {
@@ -293,7 +299,7 @@ main {
   bottom: 18px;
 }
 .motto .motto__text {
-  font-size: 0.875em;
+  font-size: 1em;
   margin: 0;
   text-align: right;
   color: #1f2041;
@@ -317,7 +323,7 @@ main {
 
 .fNavigation__text {
   line-height: 18pt;
-  font-size: 0.875em;
+  font-size: 1em;
   margin: 0;
   color: #1f2041;
   opacity: 0.75;
@@ -333,7 +339,7 @@ main {
 
 .footul li {
   margin-top: 21px;
-  font-size: 0.875em;
+  font-size: 1em;
   text-decoration: none;
 }
 
@@ -354,7 +360,7 @@ main {
 .fNavigation__descriptionSub {
   line-height: 24px;
   margin: 19px 0 0 0;
-  font-size: 0.875em;
+  font-size: 1em;
 }
 
 .fNavigation__textCaption,
@@ -363,7 +369,7 @@ main {
 .fNavigation_textAbus {
   font-weight: bold;
   color: #1f2041;
-  font-size: 0.75rem;
+  font-size: 0.875em;
 }
 
 .fNavigation__textCaption {
@@ -392,7 +398,7 @@ main {
   padding: 0;
   opacity: 0.25;
   padding-left: 15px;
-  font-size: 0.875em;
+  font-size: 1em;
   font-family: inherit;
 }
 
@@ -443,7 +449,7 @@ main {
 
 .copBar__copyright p {
   margin: 0;
-  font-size: 0.875em;
+  font-size: 1em;
   color: #1f2041;
   opacity: 0.75;
 }

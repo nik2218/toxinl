@@ -1,28 +1,36 @@
-$fz14:0.875em;
-$fz12:0.75rem;
+$fz14:1em;
+$fz12:0.875em;
 $op75:0.75;
 $op5:0.5;
 $op25:0.25;
+$op05: 0.05;
+$grad:linear-gradient(#bc9cff, #8ba4f9);
+$PurCol:#bc9cff;
+$GreColor:#6fcf97;
+$MainColor:#1f2041;
+html{
+	font-size: 14px;
+}
 body {
 	background-color: #ffff;
 	font-family: "Montserrat", sans-serif;
 	margin: 0;
 	padding: 0;
-	max-width: 1900px;
 }
 /* шапка */
- header {
+.container{
+		max-width: 1900px;
 		display: grid;
 		grid-template-areas:
 		  "logo navigation account"
 		  "logo navigation account"
 		  "logo navigation account";
-		grid-template-columns: 1fr 1fr 1fr;
-		margin: 0 140px 0px;
- }
+		grid-template-columns: 33.33% 33.33% 33.33%;
+		padding: 0 10em;
+}
  .logo {
 	grid-area: logo;
-	padding-top: 0.188em;
+	padding-top: 0.214em;
 	align-self: center;
  }
  .navigation {
@@ -39,17 +47,17 @@ body {
 		margin-block-end: 0;
 	 }
 	 .navigation__list a:nth-child(2) {
-		margin-right: 20px;
+		margin-right: 1.43em;
 	 }
 	 .navigation__link__more {
 		column-gap: 0;
 	 }
 	 .navigation__link {
 		display: block;
-		margin: 26px 0 26px 0;
+		margin: 1.86em 0 1.86em 0;
 		text-decoration: none;
-		margin-right: 23px;
-		color: #1f2041;
+		margin-right: 1.64em;
+		color: $MainColor;
 		opacity: $op5;
 		font-size: $fz14;
 	 }
@@ -71,7 +79,7 @@ body {
 		font-size: $fz12;
 		text-decoration: none;
 		padding: 8px 20px;
-		color: #bc9cff;
+		color: $PurCol;
 		background: #ffff;
 		border-radius: 22px;
 		margin-right: 17px;
@@ -80,7 +88,7 @@ body {
 	 .account__enter::after {
 		content: " ";
 		display: block;
-		background-image: linear-gradient(#bc9cff, #8ba4f9);
+		background-image: $grad;
 		position: absolute;
 		top: -1px;
 		left: -1px;
@@ -97,7 +105,7 @@ body {
 		text-decoration: none;
 		padding: 8px 19px;
 		color: #ffff;
-		background: linear-gradient(#bc9cff, #8ba4f9);
+		background: $grad;
 		border-radius: 22px;
 		font-weight: bold;
 	 }
@@ -105,7 +113,7 @@ body {
 	 .account__registration::after {
 		content: " ";
 		display: block;
-		background-image: linear-gradient(#bc9cff, #8ba4f9);
+		background-image: $grad;
 		position: absolute;
 		top: -1px;
 		left: -1px;
@@ -129,27 +137,27 @@ body {
 	border-radius: 4px;
 	display: grid;
 	margin-left: 140px;
-	max-width: 320px;
-	max-height: 304px;
+	width: 320px;
+	height: 304px;
 	padding: 39px 29px 29px;
 	background-color: rgb(255, 255, 255);
-	border: 1px solid #e8e8ec;
+	border: 1px solid rgba(31, 32, 65, 0.25);
 	box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 25%), 0px 0px 0px rgb(0 0 0 / 25%);
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 25% 15% 25% 15.5%;
 	grid-template-areas:
 	  "search__title search__title search__title search__title"
 	  "search__arrival search__arrival search__departure search__departure"
 	  "search__guests search__guests search__guests search__guests"
 	  "search__find search__find search__find search__find";
-	grid-template-rows: 80px 85px 85px 56px;
-	column-gap: 20px;
+	grid-template-rows: 27.4% 27.6% 24% 21.5%;
+	column-gap: 6.5%;
 	 .search__title {
 		grid-area: search__title;
 		margin: 0;
-		padding: 0;
+		padding-top: 1%;
 		text-align: left;
-		color: #1f2041;
-		font-size: 1.5em;
+		color: $MainColor;
+		font-size: 1.714rem;
 		font-weight: 900;
 	 }
 	 .search__arrival {
@@ -159,10 +167,11 @@ body {
 	 }
 	 .search__textArrival,
 	 .search__textDeparture {
-	margin: 0 0 5.44px 0;
-	color: #1f2041;
-	font-weight: bold;
+	margin: 0 0 0.4em 0;
+	color: $MainColor;
+	font-weight: 700;
 	font-size: $fz12;
+	padding-top: 0.5%;
  }
  input[type="date"]::-webkit-calendar-picker-indicator {
 	background: url(/landing/source/img/arrow.svg) no-repeat;
@@ -198,10 +207,11 @@ body {
  
  .search__guests {
 	grid-area: search__guests;
-	border-color: #1f2041;
+	border-color: $MainColor;
  }
  
  .search__textGuests {
+	 padding-top: 0.5%;
 	margin: 0 0 5px 0;
 	font-size: $fz12;
 	font-weight: bold;
@@ -216,7 +226,7 @@ body {
 	width: 320px;
 	height: 44px;
 	background: url(/landing/source/img/arrow.svg) no-repeat 95% 50%;
-	border: 1px solid #1f2041;
+	border: 1px solid $MainColor;
 	opacity: $op5;
  }
  
@@ -229,7 +239,7 @@ body {
 	width: 320px;
 	font-weight: bold;
 	border-radius: 22px;
-	background: linear-gradient(#bc9cff, #8ba4f9);
+	background: $grad;
 	border: none;
 	color: #fff;
 	align-self: end;
@@ -259,16 +269,13 @@ body {
 		font-size: $fz14;
 		margin: 0;
 		text-align: right;
-		color: #1f2041;
+		color: $MainColor;
 		opacity: $op75;
 		width: 297px;
 	 
 	 }	 
  }
 /* подвал и копирайт */
-// footer{
-// 	margin: 100px 140px 0 140px;
-// }
 .fNavigation {
 	display: grid;
 	grid-template-areas:
@@ -283,7 +290,7 @@ body {
    line-height: 18pt;
   	font-size: $fz14;
    margin: 0;
-	color: #1f2041;
+	color: $MainColor;
 	opacity: $op75;
 }
 .footul{
@@ -298,7 +305,7 @@ body {
 }
 .footul li a {
 	text-decoration: none;
-	color: #1f2041;
+	color: $MainColor;
 	opacity: $op5;
 }
 .fNavigation__listAbus {
@@ -317,7 +324,7 @@ body {
 .fNavigation__textSup,
 .fNavigation_textAbus {
 	font-weight: bold;
-	color: #1f2041;
+	color: $MainColor;
 	font-size: $fz12;
 }
 .fNavigation__textCaption {
@@ -337,7 +344,7 @@ body {
 	height: 42px;
 	border-top-left-radius: 4px;
 	border-bottom-left-radius: 4px;
-	border: 1px solid #1f2041;
+	border: 1px solid $MainColor;
 	border-right: 0;
 	padding: 0;
 	opacity: $op25;
@@ -380,7 +387,7 @@ body {
 .copBar__copyright p {
 	margin: 0;
 	font-size: $fz14;
-	color: #1f2041;
+	color: $MainColor;
 	opacity: $op75;
 }
 .copBar__networks {
