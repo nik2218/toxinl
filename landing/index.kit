@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOXIN</title>
+    <link rel="stylesheet" href="/landing/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+        <!-- @import "source/header.html" -->
+    </header>
+    <main>
+      <div class="central">
+        <div class="search">
+          <p class="search__title">Найдём номера под ваши пожелания</p>
+          <div class="search__arrival">
+            <p class="search__textArrival">ПРИБЫТИЕ</p>
+            <input type="date" />
+          </div>
+          <div class="search__departure">
+            <p class="search__textDeparture">ВЫЕЗД</p>
+            <input type="date"/>
+          </div>
+          <div class="search__guests">
+            <form>
+              <p class="search__textGuests">ГОСТИ</p>
+              <select name="search__selectGuests">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </form>
+          </div>
+          <button class="search__find" type="submit" title="Найти">
+            <img
+              class="search__arrow"
+              src="/landing/source/img/arrow_button.svg"
+              alt="arrow"
+            />
+            ПОДОБРАТЬ НОМЕР
+          </button>
+        </div>
+        <div class="motto">
+          <p class="motto__text">
+            Лучшие номера для вашей работы, отдыха и просто вдохновения
+          </p>
+        </div>
+      </div>
+    </main>    
+    <footer>
+        <!-- @import "source/footer.html" -->
+    </footer>
+  </body>
+</html>

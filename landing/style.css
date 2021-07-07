@@ -1,4 +1,78 @@
 @charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
 html {
   font-size: 14px;
 }
@@ -6,8 +80,6 @@ html {
 body {
   background-color: #ffff;
   font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 /* шапка */
@@ -41,9 +113,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   grid-area: header__list;
@@ -59,11 +128,6 @@ body {
 .navigation .navigation__list a:nth-child(2) {
   margin-right: 1.43em;
 }
-.navigation .navigation__link__more {
-  -webkit-column-gap: 0;
-     -moz-column-gap: 0;
-          column-gap: 0;
-}
 .navigation .navigation__link {
   display: block;
   margin: 1.86em 0 1.86em 0;
@@ -73,8 +137,13 @@ body {
   opacity: 0.5;
   font-size: 1em;
 }
+.navigation .arrow {
+  margin-left: 2px;
+  margin-top: 5%;
+}
 .navigation .navigation__arrow {
   margin-left: 2px;
+  margin-top: 8%;
 }
 
 .account {
@@ -142,10 +211,9 @@ body {
 }
 
 /* основная часть */
-main {
+.central {
   background-image: url(/landing/source/img/backImage.png);
-  min-height: 763px;
-  min-width: none;
+  height: 830px;
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 4.2em;
@@ -156,8 +224,8 @@ main {
   display: -ms-grid;
   display: grid;
   margin-left: 140px;
-  width: 320px;
-  height: 304px;
+  width: 374px;
+  height: 380px;
   padding: 39px 29px 29px;
   background-color: white;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -166,8 +234,8 @@ main {
   -ms-grid-columns: 25% 6.5% 15% 6.5% 25% 6.5% 15.5%;
   grid-template-columns: 25% 15% 25% 15.5%;
       grid-template-areas: "search__title search__title search__title search__title" "search__arrival search__arrival search__departure search__departure" "search__guests search__guests search__guests search__guests" "search__find search__find search__find search__find";
-  -ms-grid-rows: 27.4% 27.6% 24% 22%;
-  grid-template-rows: 27.4% 27.6% 24% 22%;
+  -ms-grid-rows: 27% 27.9% 24% 21%;
+  grid-template-rows: 27% 27.9% 24% 21%;
   -webkit-column-gap: 6.5%;
      -moz-column-gap: 6.5%;
           column-gap: 6.5%;
@@ -178,11 +246,11 @@ main {
   -ms-grid-column-span: 7;
   grid-area: search__title;
   margin: 0;
-  padding-top: 1%;
   text-align: left;
   color: #1f2041;
   font-size: 1.714em;
   font-weight: 900;
+  line-height: 29.26px;
 }
 .search .search__arrival {
   -ms-grid-row: 2;
@@ -195,11 +263,12 @@ main {
 .search .search__textArrival,
 .search .search__textDeparture {
   margin: 0;
-  margin-bottom: 0.389em;
+  margin-bottom: 0.2em;
   color: #1f2041;
   font-weight: 700;
   font-size: 0.875em;
   font-family: inherit;
+  height: 25%;
 }
 .search input[type=date]::-webkit-calendar-picker-indicator {
   background: url(/landing/source/img/arrow.svg) no-repeat;
@@ -248,7 +317,6 @@ main {
   border-color: #1f2041;
 }
 .search .search__textGuests {
-  padding-top: 0.5%;
   margin: 0 0 5px 0;
   font-size: 0.875em;
   font-weight: bold;
@@ -302,12 +370,9 @@ main {
 
 .motto {
   position: absolute;
-  top: 836px;
-  left: 1009px;
-  right: 140px;
-  bottom: 18px;
 }
 .motto .motto__text {
+  line-height: 24px;
   font-size: 1em;
   margin: 0;
   text-align: right;
@@ -318,12 +383,18 @@ main {
 
 /* подвал и копирайт */
 .fNavigation {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "fNavigation__description fNavigation__nav fNavigation__aboutus fNavigation__support fNavigation__subscription";
-  -ms-grid-columns: 260px 1fr 1fr 1fr 260px;
-  grid-template-columns: 260px 1fr 1fr 1fr 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 39px;
   padding: 6.945% 9.723% 0 9.723%;
+}
+
+.fNavigation__description {
+  width: 22.415%;
+  height: 132px;
 }
 
 .fNavigation__text {
@@ -331,9 +402,14 @@ main {
   font-size: 1em;
   padding: 0;
   margin: 0;
-  padding-top: 5%;
+  padding-top: 6.5%;
   color: #1f2041;
   opacity: 0.75;
+}
+
+.fNavigation__nav {
+  height: 168px;
+  width: 12.328%;
 }
 
 .footul {
@@ -342,63 +418,77 @@ main {
           margin-block-start: 0;
   -webkit-margin-after: 0;
           margin-block-end: 0;
-  text-decoration: none;
 }
 .footul li a {
-  text-decoration: none;
   color: #1f2041;
   opacity: 0.5;
   padding: 0;
   margin: 0;
 }
 
+.footnav {
+  margin-left: 0;
+}
 .footnav li {
-  margin-bottom: 11.5%;
+  margin-bottom: 16.5%;
+}
+
+.fNavigation__aboutus {
+  width: 11%;
 }
 
 .fNavigation__listAbus {
-  padding-left: 12.5%;
+  padding-left: 15.5%;
 }
 .fNavigation__listAbus li {
-  margin-bottom: 10.5%;
+  margin-bottom: 22.5%;
+}
+
+.fNavigation__support {
+  width: 17.7%;
 }
 
 .fNavigation__listSup {
-  padding-left: 6%;
+  padding-left: 25.5%;
 }
 .fNavigation__listSup li {
-  margin-bottom: 10%;
+  margin-bottom: 16%;
+}
+
+.fNavigation__subscription {
+  width: 23%;
 }
 
 .fNavigation__descriptionSub {
-  line-height: 179%;
-  margin: 7.3% 0 0 0;
+  line-height: 178%;
+  margin: 7.3% 0 0 3.5%;
   font-size: 1em;
 }
 
 .fNavigation__textCaption,
 .fNavigation__textSub,
 .fNavigation__textSup,
-.fNavigation_textAbus {
+.fNavigation__textAbus {
   font-weight: bold;
   color: #1f2041;
   font-size: 0.875em;
 }
 
 .fNavigation__textCaption {
-  margin: 1.5% 0 10% 19%;
+  margin-top: 4.79%;
+  margin-bottom: 17%;
 }
 
-.fNavigation_textAbus {
-  margin: 1.5% 0 10% 12.5%;
+.fNavigation__textAbus {
+  margin: 4.79% 0 18.5% 15%;
 }
 
 .fNavigation__textSup {
-  margin: 1.5% 0 10% 6%;
+  margin: 3.5% 0 11% 24.9%;
 }
 
 .fNavigation__textSub {
-  margin: 1.2% 0 0 0;
+  margin: 2.5% 0 0 3.4%;
 }
 
 input[type=text] {
@@ -423,13 +513,15 @@ input[type=text] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   margin-top: 23px;
+  margin-left: 3.4%;
 }
 
 .fNavigation__btnMail {
-  padding: 0;
+  padding-left: 2%;
   width: 44px;
-  height: 44px;
+  height: 42px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-left: 0;
   border-top-right-radius: 4px;
@@ -450,7 +542,7 @@ input[type=text] {
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   height: 70px;
-  margin-top: 5.75%;
+  margin-top: 5.49%;
   -webkit-box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.25);
           box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.25);
   padding: 0 9.723%;

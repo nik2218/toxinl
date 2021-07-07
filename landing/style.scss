@@ -1,3 +1,20 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
 $fz14:1em;
 $fz12:0.875em;
 $op75:0.75;
@@ -15,8 +32,6 @@ html{
 body {
 	background-color: #ffff;
 	font-family: $fontFam;
-	margin: 0;
-	padding: 0;
 }
 /* шапка */
 .container{
@@ -38,7 +53,6 @@ body {
 	grid-area: navigation;
 	.navigation__list {
 		display: flex;
-		justify-content: flex-end;
 		flex-wrap: wrap;
 		grid-area: header__list;
 		font-size: $fz14;
@@ -46,13 +60,10 @@ body {
 		list-style-type: none;
 		margin-block-start: 0;
 		margin-block-end: 0;
-	 }
-	 .navigation__list a:nth-child(2) {
-		margin-right: 1.43em;
-	 }
-	 .navigation__link__more {
-		column-gap: 0;
-	 }
+	}
+		 .navigation__list a:nth-child(2) {
+			margin-right: 1.43em;
+		 }
 	 .navigation__link {
 		display: block;
 		margin: 1.86em 0 1.86em 0;
@@ -62,13 +73,16 @@ body {
 		opacity: $op5;
 		font-size: $fz14;
 	 }
-	 
+	 .arrow{
+		margin-left: 2px;
+		margin-top: 5%
+	 }
 	 .navigation__arrow {
 		margin-left: 2px;
+		margin-top: 8%;
 	 }
-
  }
- .account {
+.account {
 	grid-area: account;
 	font-size: $fz12;
 	align-self: center;
@@ -125,20 +139,20 @@ body {
 	 }  
  }
 /* основная часть */
-  main {
-		background-image: url(/landing/source/img/backImage.png);
-		min-height: 763px;
-		min-width: none;
-		background-size: cover;
-		background-repeat: no-repeat;
-		padding-top: 4.2em;
+ .central{
+	background-image: url(/landing/source/img/backImage.png);
+	height: 830px;
+	// min-width: none;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 4.2em;
  }
  .search {
 	border-radius: 4px;
 	display: grid;
 	margin-left: 140px;
-	width: 320px;
-	height: 304px;
+	width: 374px;
+	height: 380px;
 	padding: 39px 29px 29px;
 	background-color: rgb(255, 255, 255);
 	border: 1px solid rgba(31, 32, 65, 0.25);
@@ -149,16 +163,17 @@ body {
 	  "search__arrival search__arrival search__departure search__departure"
 	  "search__guests search__guests search__guests search__guests"
 	  "search__find search__find search__find search__find";
-	grid-template-rows: 27.4% 27.6% 24% 22%;
+	grid-template-rows: 27% 27.9% 24% 21%;
 	column-gap: 6.5%;
 	 .search__title {
 		grid-area: search__title;
 		margin: 0;
-		padding-top: 1%;
+		// padding-top: 1%;
 		text-align: left;
 		color: $MainColor;
 		font-size: 1.714em;
 		font-weight: 900;
+		line-height: 29.26px;
 	 }
 	 .search__arrival {
 		grid-area: search__arrival;
@@ -168,11 +183,13 @@ body {
 	 .search__textArrival,
 	 .search__textDeparture {
 		margin: 0;
-		margin-bottom: 0.389em;
+		margin-bottom: 0.2em;
 		color: $MainColor;
 		font-weight: 700;
 		font-size: $fz12;
 		font-family: inherit;
+		height: 25%;
+		
 	}
  input[type="date"]::-webkit-calendar-picker-indicator {
 	background: url(/landing/source/img/arrow.svg) no-repeat;
@@ -217,8 +234,7 @@ body {
  }
  
  .search__textGuests {
-	 padding-top: 0.5%;
-	margin: 0 0 5px 0;
+		margin: 0 0 5px 0;
 	font-size: $fz12;
 	font-weight: bold;
 	text-align: top;
@@ -267,11 +283,8 @@ body {
 }
 .motto {
 	position: absolute;
-	top: 836px;
-	left: 1009px;
-	right: 140px;
-	bottom: 18px;
 	.motto__text {
+		line-height: 24px;
 		font-size: $fz14;
 		margin: 0;
 		text-align: right;
@@ -283,29 +296,33 @@ body {
  }
 /* подвал и копирайт */
 .fNavigation {
-	display: grid;
-	grid-template-areas:
-	  "fNavigation__description fNavigation__nav fNavigation__aboutus fNavigation__support fNavigation__subscription";
-	grid-template-columns: 260px 1fr 1fr 1fr 260px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 39px;
 	padding: 6.945% 9.723% 0 9.723%;
 }
-
+.fNavigation__description{
+	width: 22.415%;
+	height: 132px;
+}
 .fNavigation__text {
 	line-height: 18pt;
   	font-size: $fz14;
 	padding: 0;
     margin: 0;
-	padding-top: 5%;
+	padding-top: 6.5%;
 	color: $MainColor;
 	opacity: $op75;
+}
+.fNavigation__nav{
+	height: 168px;
+	width: 12.328%;
 }
 .footul{
 	list-style-type: none;
 	margin-block-start: 0;
 	margin-block-end: 0;
-	text-decoration: none;
 	li a{
-		text-decoration: none;
 		color: $MainColor;
 		opacity: $op5;
 		padding: 0;
@@ -313,46 +330,57 @@ body {
 	}
 }
 .footnav{
+	margin-left: 0;
 	li{
-		margin-bottom: 11.5%;
+		margin-bottom: 16.5%;
 	}
+}
+.fNavigation__aboutus{
+	width: 11%;
 }
 .fNavigation__listAbus {
-	padding-left: 12.5%;
+	padding-left: 15.5%;
 	li{
-		margin-bottom: 10.5%;
+		margin-bottom: 22.5%;
 	}
+}
+.fNavigation__support{
+	width: 17.7%;
 }
 .fNavigation__listSup {
-	padding-left: 6%;
+	padding-left: 25.5%;
 	li{
-		margin-bottom: 10%;
+		margin-bottom: 16%;
 	}
 }
+.fNavigation__subscription{
+	width: 23%;
+}
 .fNavigation__descriptionSub {
-	line-height: 179%;
-	margin: 7.3% 0 0 0;
+	line-height: 178%;
+	margin: 7.3% 0 0 3.5%;
 	font-size: $fz14;
 }
 .fNavigation__textCaption,
 .fNavigation__textSub,
 .fNavigation__textSup,
-.fNavigation_textAbus {
+.fNavigation__textAbus {
 	font-weight: bold;
 	color: $MainColor;
 	font-size: $fz12;
 }
 .fNavigation__textCaption {
-	margin: 1.5% 0 10% 19%;
+	margin-top: 4.79%;
+	margin-bottom: 17%;	
 }
-.fNavigation_textAbus {
-	margin: 1.5% 0 10% 12.5%;
+.fNavigation__textAbus {
+	margin: 4.79% 0 18.5% 15%;
 }
 .fNavigation__textSup {
-	margin: 1.5% 0 10% 6%;
+	margin: 3.5% 0 11% 24.9%;
 }
 .fNavigation__textSub {
-	margin: 1.2% 0 0 0;
+	margin: 2.5% 0 0 3.4%;
 }
 input[type="text"] {
 	margin: 0;
@@ -372,12 +400,15 @@ input[type="text"] {
 }
 .fNavigation__mail {
 	display: flex;
+	width: 100%;
 	margin-top: 23px;
+	margin-left: 3.4%;
+
 }
 .fNavigation__btnMail {
-	padding: 0;
+	padding-left: 2%;
 	width: 44px;
-	height: 44px;
+	height: 42px;
 	border: 1px solid rgba(31, 32, 65, 0.25);
 	border-left: 0;
 	border-top-right-radius: 4px;
@@ -394,7 +425,7 @@ input[type="text"] {
 	grid-template-areas: "copBar__copyright copBar__networks";
 	grid-template-columns: 1fr 1fr;
 	height: 70px;
-	margin-top: 5.75%;
+	margin-top: 5.49%;
 	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.25);
 	padding: 0 9.723%;
 }
