@@ -83,16 +83,28 @@ body {
 }
 
 /* шапка */
+header {
+  min-width: none;
+}
+
+/* шапка */
 .container {
   max-width: 1900px;
+  height: 4.9em;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "logo navigation account" "logo navigation account" "logo navigation account";
-  -ms-grid-columns: 33.33% 33.33% 33.33%;
-  grid-template-columns: 33.33% 33.33% 33.33%;
+  -ms-grid-columns: 13% 60% 27%;
+  grid-template-columns: 13% 60% 27%;
   padding: 0 9.723%;
 }
 
+@media (max-width: 1900px) {
+  .container {
+    max-width: none;
+    height: 70px;
+  }
+}
 .logo {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
@@ -108,15 +120,20 @@ body {
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
   grid-area: navigation;
+  height: inherit;
 }
 .navigation .navigation__list {
+  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   grid-area: header__list;
-  font-size: 1em;
+  font-size: 14px;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
   list-style-type: none;
@@ -135,7 +152,7 @@ body {
   margin-right: 1.64em;
   color: #1f2041;
   opacity: 0.5;
-  font-size: 1em;
+  font-size: 14px;
 }
 .navigation .arrow {
   margin-left: 2px;
@@ -151,7 +168,7 @@ body {
   -ms-grid-row-span: 3;
   -ms-grid-column: 3;
   grid-area: account;
-  font-size: 0.875em;
+  font-size: 12px;
   -ms-grid-row-align: center;
       align-self: center;
   -ms-grid-column-align: end;
@@ -160,15 +177,14 @@ body {
 .account .account__enter {
   position: relative;
   display: inline-block;
-  cursor: pointer;
-  font-size: 0.875em;
+  font-size: 12px;
   text-decoration: none;
-  padding: 8px 20px;
+  padding: 9.5px 19px;
   color: #bc9cff;
   background: #ffff;
   border-radius: 22px;
-  margin-right: 17px;
-  font-weight: bold;
+  margin-right: 20px;
+  font-weight: 700;
 }
 .account .account__enter::after {
   content: " ";
@@ -186,15 +202,14 @@ body {
 .account .account__registration {
   position: relative;
   display: inline-block;
-  cursor: pointer;
-  font-size: 0.875em;
+  font-size: 12px;
   text-decoration: none;
-  padding: 8px 19px;
+  padding: 9.5px 19px;
   color: #ffff;
   background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
   background: linear-gradient(#bc9cff, #8ba4f9);
   border-radius: 22px;
-  font-weight: bold;
+  font-weight: 700;
 }
 .account .account__registration::after {
   content: " ";
@@ -211,19 +226,30 @@ body {
 }
 
 /* основная часть */
+@media (max-width: 1900px) {
+  .central {
+    max-width: 1440px;
+  }
+}
+@media (max-width: 1732px) {
+  .central {
+    max-width: 970px;
+  }
+}
 .central {
   background-image: url(/landing/source/img/backImage.png);
   height: 830px;
+  max-width: 1900px;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 4.2em;
+  padding-top: 4.862%;
 }
 
 .search {
   border-radius: 4px;
   display: -ms-grid;
   display: grid;
-  margin-left: 140px;
+  margin: 0 9.723% 0 9.723%;
   width: 374px;
   height: 380px;
   padding: 39px 29px 29px;
@@ -266,7 +292,7 @@ body {
   margin-bottom: 0.2em;
   color: #1f2041;
   font-weight: 700;
-  font-size: 0.875em;
+  font-size: 12px;
   font-family: inherit;
   height: 25%;
 }
@@ -318,7 +344,7 @@ body {
 }
 .search .search__textGuests {
   margin: 0 0 5px 0;
-  font-size: 0.875em;
+  font-size: 12px;
   font-weight: bold;
   text-align: top;
 }
@@ -352,7 +378,7 @@ body {
   color: #fff;
   -ms-grid-row-align: end;
       align-self: end;
-  font-size: 0.875em;
+  font-size: 12px;
   cursor: pointer;
   font-family: inherit;
 }
@@ -373,7 +399,7 @@ body {
 }
 .motto .motto__text {
   line-height: 24px;
-  font-size: 1em;
+  font-size: 14px;
   margin: 0;
   text-align: right;
   color: #1f2041;
@@ -381,6 +407,7 @@ body {
   width: 297px;
 }
 
+/* подвал и копирайт */
 /* подвал и копирайт */
 .fNavigation {
   display: -webkit-box;
@@ -399,7 +426,7 @@ body {
 
 .fNavigation__text {
   line-height: 18pt;
-  font-size: 1em;
+  font-size: 14px;
   padding: 0;
   margin: 0;
   padding-top: 6.5%;
@@ -462,7 +489,7 @@ body {
 .fNavigation__descriptionSub {
   line-height: 178%;
   margin: 7.3% 0 0 3.5%;
-  font-size: 1em;
+  font-size: 14px;
 }
 
 .fNavigation__textCaption,
@@ -471,7 +498,7 @@ body {
 .fNavigation__textAbus {
   font-weight: bold;
   color: #1f2041;
-  font-size: 0.875em;
+  font-size: 12px;
 }
 
 .fNavigation__textCaption {
@@ -505,7 +532,7 @@ input[type=text] {
   padding: 0;
   opacity: 0.25;
   padding-left: 15px;
-  font-size: 1em;
+  font-size: 14px;
   font-family: inherit;
 }
 
@@ -558,7 +585,7 @@ input[type=text] {
 
 .copBar__copyright p {
   margin: 0;
-  font-size: 1em;
+  font-size: 14px;
   color: #1f2041;
   opacity: 0.75;
 }
