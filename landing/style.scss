@@ -2,183 +2,180 @@
 @import "source/nullstyle.scss";
 /*--------------------*/
 @import "source/variables.scss";
-html{
-	font-size: 14px;
+html {
+  font-size: 14px;
 }
 body {
-	background-color: #ffff;
-	font-family: $fontFam;
+  background-color: #ffff;
+  font-family: $fontFam;
 }
 /* шапка */
-header{
-	min-width: none;
+header {
+  min-width: none;
 }
 @import "source/header.scss";
 /* основная часть */
-@media(max-width:1900px){
-	.central{
-		max-width: 1440px;
-	}
+@media (max-width: 1900px) {
+  .central {
+    max-width: 1440px;
+  }
 }
-@media(max-width:1732px){
-	.central{
-		max-width: 970px;
-	}
+@media (max-width: 1732px) {
+  .central {
+    max-width: 970px;
+  }
 }
- .central{
-	background-image: url(/landing/source/img/backImage.png);
-	height: 830px;
-	max-width: 1900px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	padding-top: 4.862%;
- }
- .search {
-	border-radius: 4px;
-	display: grid;
-	margin: 0 9.723% 0 9.723%;
-	width: 374px;
-	height: 380px;
-	padding: 39px 29px 29px;
-	background-color: rgb(255, 255, 255);
-	border: 1px solid rgba(31, 32, 65, 0.25);
-	box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 25%), 0px 0px 0px rgb(0 0 0 / 25%);
-	grid-template-columns: 25% 15% 25% 15.5%;
-	grid-template-areas:
-	  "search__title search__title search__title search__title"
-	  "search__arrival search__arrival search__departure search__departure"
-	  "search__guests search__guests search__guests search__guests"
-	  "search__find search__find search__find search__find";
-	grid-template-rows: 27% 27.9% 24% 21%;
-	column-gap: 6.5%;
-	 .search__title {
-		grid-area: search__title;
-		margin: 0;
-		// padding-top: 1%;
-		text-align: left;
-		color: $MainColor;
-		font-size: 1.714em;
-		font-weight: 900;
-		line-height: 29.26px;
-	 }
-	 .search__arrival {
-		grid-area: search__arrival;
-		height: 82%;
-		width: 150px;
-	 }
-	 .search__textArrival,
-	 .search__textDeparture {
-		margin: 0;
-		margin-bottom: 0.2em;
-		color: $MainColor;
-		font-weight: 700;
-		font-size: $fz12;
-		font-family: inherit;
-		height: 25%;
-		
-	}
- input[type="date"]::-webkit-calendar-picker-indicator {
-	background: url(/landing/source/img/arrow.svg) no-repeat;
-	background-size: initial;
-	transform: translate(-10%, 38%);
-	flex-basis: content;
-	margin: 0;
-	padding: 3%;
- }
- input[type="date"]::-webkit-datetime-edit { 
-	 font-size: 14px;
-	 font-weight: 400;
-	 opacity: $op75;
-	 text-transform: uppercase;
-	 font-family: $fontFam;
- }
- input[type = "date"] {
-	font-family: inherit;
-	width: 150px;
-	height: 62%;
-	box-sizing: border-box;
-	border-radius: 4px;
-	border-width: 1px;
-	// font-size: 17px;
-	text-align: center;
-	line-height: 18pt;
-	font-weight: 400;
-	border: 1px solid rgb(31 32 65 / 0.25) ;
-	
-	margin: 0;
-	padding: 0;
- }
- .search__departure {
-	grid-area: search__departure;
-	height: 82%;
-	width: 150px;
- }
- 
- .search__guests {
-	grid-area: search__guests;
-	border-color: $MainColor;
- }
- 
- .search__textGuests {
-		margin: 0 0 5px 0;
-	font-size: $fz12;
-	font-weight: bold;
-	text-align: top;
- }
- select {
-	text-indent: 15px;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
-	border-radius: 4px;
-	width: 320px;
-	height: 44px;
-	background: url(/landing/source/img/arrow.svg) no-repeat 95% 50%;
-	border: 1px solid rgb(31 32 65 / 0.25);
-	opacity: $op5;
- }
- .search__find {
-	grid-area: search__find;
-	height: 44px;
-	padding: 8px 23.219px;
-	position: relative;
-	text-decoration: none;
-	width: 320px;
-	font-weight: 700;
-	border-radius: 22px;
-	background: $grad;
-	border: none;
-	color: #fff;
-	align-self: end;
-	font-size: $fz12;
-	cursor: pointer;
-	font-family: inherit;
- }
- 
- .search__arrow {
-	display: inline-block;
-	vertical-align: middle;
-	fill: #fff;
-	margin: 0;
-	transform: translate(-51%, -51%);
-	position: absolute;
-	top: 50%;
-	left: 93%;
- }
+.central {
+  background-image: url(/landing/source/img/backImage.png);
+  height: 830px;
+  max-width: 1900px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 4.862%;
+}
+.search {
+  border-radius: 4px;
+  display: grid;
+  margin: 0 9.723% 0 9.723%;
+  width: 374px;
+  height: 380px;
+  padding: 39px 29px 29px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 25%), 0px 0px 0px rgb(0 0 0 / 25%);
+  grid-template-columns: 25% 15% 25% 15.5%;
+  grid-template-areas:
+    "search__title search__title search__title search__title"
+    "search__arrival search__arrival search__departure search__departure"
+    "search__guests search__guests search__guests search__guests"
+    "search__find search__find search__find search__find";
+  grid-template-rows: 27% 27.9% 24% 21%;
+  column-gap: 6.5%;
+  .search__title {
+    grid-area: search__title;
+    margin: 0;
+    // padding-top: 1%;
+    text-align: left;
+    color: $MainColor;
+    font-size: 1.714em;
+    font-weight: 900;
+    line-height: 29.26px;
+  }
+  .search__arrival {
+    grid-area: search__arrival;
+    height: 82%;
+    width: 150px;
+  }
+  .search__textArrival,
+  .search__textDeparture {
+    margin: 0;
+    margin-bottom: 0.2em;
+    color: $MainColor;
+    font-weight: 700;
+    font-size: $fz12;
+    font-family: inherit;
+    height: 25%;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url(/landing/source/img/arrow.svg) no-repeat;
+    background-size: initial;
+    transform: translate(-10%, 38%);
+    flex-basis: content;
+    margin: 0;
+    padding: 3%;
+  }
+  input[type="date"]::-webkit-datetime-edit {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: $op75;
+    text-transform: uppercase;
+    font-family: $fontFam;
+  }
+  input[type="date"] {
+    font-family: inherit;
+    width: 150px;
+    height: 62%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border-width: 1px;
+    // font-size: 17px;
+    text-align: center;
+    line-height: 18pt;
+    font-weight: 400;
+    border: 1px solid rgb(31 32 65 / 0.25);
 
+    margin: 0;
+    padding: 0;
+  }
+  .search__departure {
+    grid-area: search__departure;
+    height: 82%;
+    width: 150px;
+  }
+
+  .search__guests {
+    grid-area: search__guests;
+    border-color: $MainColor;
+  }
+
+  .search__textGuests {
+    margin: 0 0 5px 0;
+    font-size: $fz12;
+    font-weight: bold;
+    text-align: top;
+  }
+  select {
+    text-indent: 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 4px;
+    width: 320px;
+    height: 44px;
+    background: url(/landing/source/img/arrow.svg) no-repeat 95% 50%;
+    border: 1px solid rgb(31 32 65 / 0.25);
+    opacity: $op5;
+  }
+  .search__find {
+    grid-area: search__find;
+    height: 44px;
+    padding: 8px 23.219px;
+    position: relative;
+    text-decoration: none;
+    width: 320px;
+    font-weight: 700;
+    border-radius: 22px;
+    background: $grad;
+    border: none;
+    color: #fff;
+    align-self: end;
+    font-size: $fz12;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .search__arrow {
+    display: inline-block;
+    vertical-align: middle;
+    fill: #fff;
+    margin: 0;
+    transform: translate(-51%, -51%);
+    position: absolute;
+    top: 50%;
+    left: 93%;
+  }
 }
 .motto {
-	position: absolute;
-	.motto__text {
-		line-height: 24px;
-		font-size: $fz14;
-		margin: 0;
-		text-align: right;
-		color: $MainColor;
-		opacity: $op75;
-		width: 297px;
-	 
-	 }	 
- }
+  position: absolute;
+  .motto__text {
+    line-height: 24px;
+    font-size: $fz14;
+    margin: 0;
+    text-align: right;
+    color: $MainColor;
+    opacity: $op75;
+    width: 297px;
+  }
+}
 /* подвал и копирайт */
-@import "source/footer.scss"
+@import "source/footer.scss";
