@@ -1,43 +1,19 @@
 @import "variables.scss";
-/* шапка */
+// * шапка *
+
 .container {
   max-width: 1900px;
   height: 5em;
   display: grid;
   grid-template-areas:
-    "logo navigation account"
-    "logo navigation account"
-    "logo navigation account";
+    "logo navigation account hamburger-menu"
+    "logo navigation account hamburger-menu"
+    "logo navigation account hamburger-menu"
+    "logo navigation account hamburger-menu";
   grid-template-columns: 10% 63% 27%;
   padding: 0 9.723%;
 }
-@media (max-width: 1389px) {
-  .container {
-    grid-template-columns: 12% 53% 35%;
-  }
-}
-@media (max-width: 1024px) {
-  .container{
-    grid-template-columns: 60% 0 40%;
-    // align-self: end;
-  }
-  .navigation{
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-   .container {
-    grid-template-columns: 20% 0 80%;
-  }
-}
-@media (max-width: 425px) {
-  .container {
-   grid-template-columns: 100% 0 0;
- }
- .account{
-  display: none;
- }
-}
+
 .logo {
   grid-area: logo;
   padding-top: 0.214em;
@@ -46,7 +22,6 @@
 .navigation {
   grid-area: navigation;
   height: inherit;
-
   .navigation__list {
     height: inherit;
     display: flex;
@@ -102,40 +77,11 @@
   grid-template-columns: repeat(2, 1fr);
   display: grid;
   align-items: center;
-  // flex-wrap: nowrap;
+  flex-wrap: nowrap;
   flex-direction: row;
   column-gap: 24px;
   width: 85px;
-
-  // .btnEnt{
-  //   display: block;
-  // }
-    .account__enter {
-    width: 85px;
-    height: 33px;
-    position: relative;
-    display: inline-block;
-    font-size: $fz12;
-    text-decoration: none;
-    text-transform: uppercase;
-    //  padding: 8px 19px;
-    color: $PurCol;
-    background: #ffff;
-    border-radius: 22px;
-    //  margin-right: 20px;
-    font-weight: 700;
-  }
-  .account__enter::after {
-    content: " ";
-    background-image: $grad;
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    z-index: -1;
-    width: calc(100% + 2px);
-    height: calc(100% + 2px);
-    border-radius: 22px;
-  }
+  
   .account__registration {
     position: relative;
     width: 193px;
@@ -163,4 +109,32 @@
     height: calc(100% + 2px);
     border-radius: 22px;
   }
+}
+.account__enter {
+  width: 85px;
+  height: 33px;
+  position: relative;
+  display: inline-block;
+  font-size: $fz12;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $PurCol;
+  background: #ffff;
+  border-radius: 22px;
+  font-weight: 700;
+}
+.account__enter::after {
+  content: " ";
+  background-image: $grad;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: -1;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border-radius: 22px;
+}
+.hamburger-menu{
+  grid-area: hamburger-menu;
+  display: none;
 }

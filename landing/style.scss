@@ -15,16 +15,7 @@ header {
 }
 @import "source/header.scss";
 /* основная часть */
-@media (max-width: 1900px) {
-  .central {
-    max-width: 1440px;
-  }
-}
-@media (max-width: 1732px) {
-  .central {
-    max-width: 970px;
-  }
-}
+
 .central {
   background-image: url(/landing/source/img/backImage.png);
   height: 830px;
@@ -179,3 +170,4 @@ header {
 }
 /* подвал и копирайт */
 @import "source/footer.scss";
+@import "source/mediarequest.scss";
