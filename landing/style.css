@@ -277,9 +277,9 @@ header {
   border-radius: 4px;
   display: -ms-grid;
   display: grid;
-  margin: 0 9.723% 0 9.723%;
-  width: 374px;
-  height: 380px;
+  margin: 0 9.723%;
+  width: 380px;
+  height: 374px;
   padding: 39px 29px 29px;
   background-color: white;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -312,7 +312,7 @@ header {
   -ms-grid-column-span: 3;
   grid-area: search__arrival;
   height: 82%;
-  width: 150px;
+  width: 100%;
 }
 .search .search__textArrival,
 .search .search__textDeparture {
@@ -342,7 +342,7 @@ header {
 }
 .search input[type=date] {
   font-family: inherit;
-  width: 150px;
+  width: 100%;
   height: 62%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -361,7 +361,7 @@ header {
   -ms-grid-column-span: 3;
   grid-area: search__departure;
   height: 82%;
-  width: 150px;
+  width: 100%;
 }
 .search .search__guests {
   -ms-grid-row: 3;
@@ -382,7 +382,7 @@ header {
   -webkit-appearance: none;
   appearance: none;
   border-radius: 4px;
-  width: 320px;
+  width: 100%;
   height: 44px;
   background: url(/landing/source/img/arrow.svg) no-repeat 95% 50%;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -397,7 +397,7 @@ header {
   padding: 8px 23.219px;
   position: relative;
   text-decoration: none;
-  width: 320px;
+  width: 100%;
   font-weight: 700;
   border-radius: 22px;
   background: -webkit-gradient(linear, left top, left bottom, from(#bc9cff), to(#8ba4f9));
@@ -424,6 +424,8 @@ header {
 
 .motto {
   position: absolute;
+  top: 230%;
+  left: 70%;
 }
 .motto .motto__text {
   line-height: 24px;
@@ -443,7 +445,7 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 39px;
+  gap: 3.39%;
   padding: 6.945% 9.723% 0 9.723%;
 }
 
@@ -675,9 +677,9 @@ input[type=text] {
 }
 @media (max-width: 425px) {
   .container {
-    -ms-grid-columns: 90% 0 0 10%;
-    grid-template-columns: 90% 0 0 10%;
-        grid-template-areas: "hamburger-menu logo" "hamburger-menu logo" "hamburger-menu logo";
+    -ms-grid-columns: 90% 0 10%;
+    grid-template-columns: 90% 0 10%;
+        grid-template-areas: "hamburger-menu logo logo" "hamburger-menu logo logo" "hamburger-menu logo logo";
   }
 
   .logo {
@@ -755,7 +757,7 @@ input[type=text] {
     position: relative;
     visibility: hidden;
     top: 0;
-    left: 100%;
+    left: -100%;
     width: 100%;
     height: 300px;
     margin: 0;
@@ -838,16 +840,123 @@ input[type=text] {
   }
 
   .search {
-    margin: 0 5% 0 5%;
+    margin: 0 6%;
+  }
+
+  .fNavigation {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "des des des des des" "nav nav us sup sup" "nav nav us sup sup" "sub sub sub sub sub" "sub sub sub sub sub";
+    gap: 0;
+  }
+
+  .fNavigation__description {
+    grid-area: des;
+    width: inherit;
+  }
+
+  .fNavigation__nav {
+    grid-area: nav;
+    width: inherit;
+  }
+
+  .fNavigation__aboutus {
+    grid-area: us;
+    width: inherit;
+  }
+  .fNavigation__aboutus .fNavigation__textAbus {
+    margin-left: 0;
+  }
+  .fNavigation__aboutus .fNavigation__listAbus {
+    padding: 0;
+  }
+
+  .fNavigation__support {
+    grid-area: sup;
+    width: inherit;
+  }
+  .fNavigation__support .fNavigation__textSup {
+    margin-bottom: 5%;
+    margin-left: 0;
+  }
+  .fNavigation__support .fNavigation__listSup {
+    padding: 0;
+  }
+
+  .fNavigation__subscription {
+    grid-area: sub;
+    width: inherit;
+  }
+  .fNavigation__subscription .fNavigation__textSub {
+    margin-left: 0;
+  }
+  .fNavigation__subscription .fNavigation__descriptionSub {
+    margin-left: 0;
+  }
+  .fNavigation__subscription .fNavigation__mail {
+    margin-left: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .logo {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
   }
   .hamburger-menu {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 1;
+  }
+}
+@media (max-width: 425px){
+
+  .fNavigation__description {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+  }
+
+  .fNavigation__nav {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+
+  .fNavigation__aboutus {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 5;
+  }
+
+  .fNavigation__support {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 3;
+  }
+
+  .fNavigation__subscription {
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+  }
+}
+@media (max-width: 375px) {
+  .search {
+    margin: 0;
+    width: 375px;
+    height: 374px;
+  }
+}
+@media (max-width: 320px) {
+  .search {
+    width: 320px;
+    height: 374px;
+    row-gap: 5px;
   }
 }
